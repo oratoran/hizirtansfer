@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "title": "Title",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "heading-top": "Find the <em>best</em> car",
+    "heading": "Book your comfort <em>Limousine</em>",
+    "heading-bot": "Anytime, Anywhere..",
+    "button": "See our services"
+  },
+  "title": "Some EPIC title in English"
+}

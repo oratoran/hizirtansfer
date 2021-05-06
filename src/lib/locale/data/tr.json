@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "title": "Başlık",
+    "home": "Ev",
+    "about": "Hakkında",
+    "services": "Hizmetler",
+    "contact": "Bize Ulaşın"
+  },
+  "hero": {
+    "heading-top": "En <em>iyi</em> arabayı bulun",
+    "heading": "Konforlu <em>Limuzininizi</em> ayırtın",
+    "heading-bot": "Her zaman, her yerde",
+    "button": "Hizmetlerimizi görün"
+  },
+  "title": "Türkçe bir EPIC başlığı"
+}
