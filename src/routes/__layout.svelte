@@ -7,15 +7,13 @@
 
 	// enable windi.css devtools on development environment
 	if (browser) import('virtual:windi-devtools');
-
-	export let segment = '';
 </script>
 
 {#if $isLoading}
 	<!-- TODO(elianiva): Implement fancy-ish loading screen -->
 	Please wait...
 {:else}
-	<Navbar {segment} />
+	<Navbar />
 	<main>
 		<slot />
 	</main>

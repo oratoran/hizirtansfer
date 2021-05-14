@@ -35,7 +35,6 @@ export const getSession: GetSession = (req) => {
 export const handle: Handle = async ({ request, render }) => {
 	const language = getLanguage(request);
 	request.locals.lang = language;
-	console.log('LMAO');
 
 	const rendered = await render(request);
 

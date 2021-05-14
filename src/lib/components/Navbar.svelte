@@ -2,9 +2,17 @@
 	import Facebook from '$lib/icons/Facebook.svelte';
 	import Twitter from '$lib/icons/Twitter.svelte';
 	import Whatsapp from '$lib/icons/Whatsapp.svelte';
+	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
+	import { page } from '$app/stores';
 
-	export let segment;
+	const pages = ['home', 'about', 'services', 'contact'];
+	let currentPage = '';
+
+	onMount(() => {
+		const paths = $page.path.split('/');
+		currentPage = paths[paths.length - 1];
+	});
 </script>
 
 <nav
@@ -15,16 +23,15 @@
 	>
 		<h1 class="font-bold font-merriweather text-xl">HizirTransfer</h1>
 		<div class="font-sans flex items-center justify-between">
-			<a href="/home">{$_('navbar.home')}</a>
-			<a class:text-yellow-500={segment} href="/about">
-				{$_('navbar.about')}
-			</a>
-			<a class:text-yellow-500={segment} href="/services"
-				>{$_('navbar.services')}</a
-			>
-			<a class:text-yellow-500={segment} href="/contact"
-				>{$_('navbar.contact')}</a
-			>
+			{#each pages as r}
+				<a
+					class:text-yellow-300={currentPage == r}
+					class="hover:text-yellow-300 font-sm transition-color duration-100 ease-in"
+					href="/{r}"
+				>
+					{$_(`navbar.${r}`)}
+				</a>
+			{/each}
 		</div>
 		<div class="flex items-center justify-end gap-5">
 			<a href="https://facebook.com"><Facebook /></a>
