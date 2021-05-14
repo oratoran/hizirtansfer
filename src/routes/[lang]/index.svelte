@@ -3,7 +3,7 @@
 	export const load: Load = ({ session }) => {
 		return {
 			status: 303,
-			redirect: `/${session.lang}`
+			redirect: `/${session.lang}/home`
 		};
 	};
 </script>

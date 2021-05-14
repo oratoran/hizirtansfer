@@ -2,6 +2,9 @@
 	import Facebook from '$lib/icons/Facebook.svelte';
 	import Twitter from '$lib/icons/Twitter.svelte';
 	import Whatsapp from '$lib/icons/Whatsapp.svelte';
+	import { _ } from 'svelte-i18n';
+
+	export let segment;
 </script>
 
 <nav
@@ -12,10 +15,16 @@
 	>
 		<h1 class="font-bold font-merriweather text-xl">HizirTransfer</h1>
 		<div class="font-sans flex items-center justify-between">
-			<a href="/home">Home</a>
-			<a href="/about">About Us</a>
-			<a href="/services">Services</a>
-			<a href="/contact">Contact</a>
+			<a href="/home">{$_('navbar.home')}</a>
+			<a class:text-yellow-500={segment} href="/about">
+				{$_('navbar.about')}
+			</a>
+			<a class:text-yellow-500={segment} href="/services"
+				>{$_('navbar.services')}</a
+			>
+			<a class:text-yellow-500={segment} href="/contact"
+				>{$_('navbar.contact')}</a
+			>
 		</div>
 		<div class="flex items-center justify-end gap-5">
 			<a href="https://facebook.com"><Facebook /></a>

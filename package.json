@@ -24,5 +24,8 @@
     "vite-plugin-windicss": "^0.15.10",
     "windicss": "^2.5.14"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "svelte-i18n": "^3.3.9"
+  }
 }
