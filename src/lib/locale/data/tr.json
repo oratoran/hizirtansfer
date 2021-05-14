@@ -1,10 +1,14 @@
 {
-  "navbar": {
-    "title": "Başlık",
-    "home": "Ev",
-    "about": "Hakkımızda",
-    "services": "Hizmetler",
-    "contact": "Bağlantı"
-  }
+	"navbar": {
+		"title": "Başlık",
+		"home": "Ev",
+		"about": "Hakkımızda",
+		"services": "Hizmetler",
+		"contact": "Bağlantı"
+	},
+	"pages": {
+		"*": "TODO: IMPLEMENT THIS",
+		"home": "Home",
+		"about": "About"
+	}
 }
-

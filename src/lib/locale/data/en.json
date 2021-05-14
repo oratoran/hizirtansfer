@@ -2,9 +2,12 @@
 	"navbar": {
 		"title": "HizirTransfer",
 		"home": "Home",
-		"about": "About Us",
+		"about": "About",
 		"services": "Services",
-		"contact": "Contact"
+		"contact": "Contact Us"
 	},
-	"title": "Some EPIC title in English"
+	"pages": {
+		"home": "Home",
+		"about": "About"
+	}
 }
