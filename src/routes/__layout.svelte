@@ -14,7 +14,7 @@
 	Please wait...
 {:else}
 	<Navbar />
-	<main>
+	<main class="mx-auto">
 		<slot />
 	</main>
 {/if}
