@@ -1,16 +1,17 @@
+import { defineConfig } from 'windicss/helpers';
 import filters from 'windicss/plugin/filters';
 
-export default {
+export default defineConfig({
 	theme: {
 		extend: {
 			fontFamily: {
-				merriweather: ['Merriweather', 'serif'],
-				sans: ['Open Sans', 'serif'],
+				lora: ['Lora', 'serif'],
+				sans: ['Open Sans', 'serif']
 			}
-		}
+		},
 	},
 	variants: {
-		filter: ['responsive']
+		filter: ['responsive'],
 	},
 	plugins: [filters]
-};
+});
