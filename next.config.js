@@ -7,7 +7,7 @@ module.exports = {
   future: {
     webpack5: true,
   },
-  webpack: config => {
+  webpack: (config) => {
     config.plugins.push(
       new WindiCSSWebpackPlugin({
         scan: {
