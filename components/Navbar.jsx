@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+import Facebook from '#icons/facebook.svg';
+import Twitter from '#icons/twitter.svg';
+import Whatsapp from '#icons/whatsapp.svg';
 
 export default function Navbar() {
   const [isScrolledDown, setScrolledDown] = useState(false);
@@ -29,7 +32,7 @@ export default function Navbar() {
         <h1 className="font-bold font-lora text-xl">HizirTransfer</h1>
         <div className="font-sans flex items-center justify-between">
           {['home', 'about', 'contact', 'services'].map((r, idx) => (
-            <Link href={`/${r}`} key={idx}>
+            <Link href={`/${r === 'home' ? '' : r}`} key={idx}>
               <a
                 class={`font-sm transition-color duration-100 ease-in ${
                   isScrolledDown
@@ -42,26 +45,23 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        {/* <div class="flex items-center justify-end gap-5"> */}
-        {/*   <a */}
-        {/*     class={isScrolledDown ? 'text-gray-700' : 'text-white'} */}
-        {/*     href="https://facebook.com" */}
-        {/*   > */}
-        {/*     <Facebook /> */}
-        {/*   </a> */}
-        {/*   <a */}
-        {/*     class={isScrolledDown ? 'text-gray-700' : 'text-white'} */}
-        {/*     href="https://twitter.com" */}
-        {/*   > */}
-        {/*     <Twitter /> */}
-        {/*   </a> */}
-        {/*   <a */}
-        {/*     class={isScrolledDown ? 'text-gray-700' : 'text-white'} */}
-        {/*     href="https://whatsapp.com" */}
-        {/*   > */}
-        {/*     <Whatsapp /> */}
-        {/*   </a> */}
-        {/* </div> */}
+        <div class="flex items-center justify-end gap-5">
+          <Link href="https://facebook.com">
+            <a className={isScrolledDown ? 'text-gray-700' : 'text-white'}>
+              <Facebook />
+            </a>
+          </Link>
+          <Link href="https://twitter.com">
+            <a className={isScrolledDown ? 'text-gray-700' : 'text-white'}>
+              <Twitter />
+            </a>
+          </Link>
+          <Link href="https://whatsapp.com">
+            <a className={isScrolledDown ? 'text-gray-700' : 'text-white'}>
+              <Whatsapp />
+            </a>
+          </Link>
+        </div>
       </div>
     </nav>
   );
