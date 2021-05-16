@@ -1,7 +1,11 @@
 const WindiCSSWebpackPlugin = require('windicss-webpack-plugin').default;
+const path = require('path');
 
 module.exports = {
-  webpack: (config) => {
+  future: {
+    webpack5: true,
+  },
+  webpack: config => {
     config.plugins.push(
       new WindiCSSWebpackPlugin({
         scan: {
@@ -9,6 +13,10 @@ module.exports = {
           exclude: ['node_modules', '.git', '.next/**/*'],
         },
       })
+    );
+    config.resolve.alias['#components'] = path.resolve(
+      __dirname,
+      'components/'
     );
     return config;
   },
