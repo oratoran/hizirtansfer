@@ -8,7 +8,7 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', () =>
-      setScrolledDown(window.pageYOffset > 160)
+      setScrolledDown(window.pageYOffset > 80)
     );
   }, []);
 
