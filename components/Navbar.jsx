@@ -17,11 +17,12 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed text-white border-b-2 ${
-        isScrolledDown
-          ? 'text-gray-700 bg-white'
-          : 'border-dashed border-gray-200 border-opacity-40'
-      } transition-all duration-300 w-screen h-22 z-5 text-white`}
+      className={`fixed text-white border-b-2 transition-all duration-300 w-screen h-22 z-5 text-white
+        ${
+          isScrolledDown
+            ? 'text-gray-700 bg-white'
+            : 'border-dashed border-gray-200 border-opacity-40'
+        }`}
       style={{
         backgroundImage: isScrolledDown
           ? ''
@@ -34,7 +35,7 @@ export default function Navbar() {
           {['home', 'about', 'contact', 'services'].map((r, idx) => (
             <Link href={`/${r === 'home' ? '' : r}`} key={idx}>
               <a
-                class={`font-sm transition-color duration-100 ease-in ${
+                className={`font-sm transition-color duration-100 ease-in ${
                   isScrolledDown
                     ? 'text-gray-700 hover:(text-amber-600 underline)'
                     : 'text-white hover:(text-amber-500 underline)'
@@ -45,7 +46,7 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div class="flex items-center justify-end gap-5">
+        <div className="flex items-center justify-end gap-5">
           <Link href="https://facebook.com">
             <a className={isScrolledDown ? 'text-gray-700' : 'text-white'}>
               <Facebook />

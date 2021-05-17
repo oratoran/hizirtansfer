@@ -7,7 +7,7 @@ module.exports = {
   future: {
     webpack5: true,
   },
-  webpack: config => {
+  webpack: (config) => {
     config.plugins.push(
       new WindiCSSWebpackPlugin({
         scan: {
@@ -20,7 +20,7 @@ module.exports = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
-    ['components', 'icons'].forEach(alias => {
+    ['components', 'icons'].forEach((alias) => {
       config.resolve.alias[`#${alias}`] = path.resolve(__dirname, `${alias}/`);
     });
     return config;
