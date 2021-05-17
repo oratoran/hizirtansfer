@@ -1,4 +1,5 @@
 import Navbar from '#components/Navbar';
+import Footer from '#components/Footer';
 import Head from 'next/head';
 
 export default function Layout({ children }) {
@@ -22,6 +23,7 @@ export default function Layout({ children }) {
       <div className="min-w-full flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-1">{children}</main>
+        <Footer />
       </div>
     </>
   );
