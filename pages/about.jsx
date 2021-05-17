@@ -6,7 +6,7 @@ export default function About() {
 
   return (
     <>
-      <header className="relative grid w-screen place-items-center h-[30rem] pt-24">
+      <header className="relative grid w-full place-items-center h-[30rem] pt-24">
         <div
           className="bg bg-fixed bg-center absolute inset-0 -z-5"
           style={{

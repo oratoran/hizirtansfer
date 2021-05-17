@@ -8,7 +8,7 @@ export default function Layout({ children }) {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
@@ -19,8 +19,10 @@ export default function Layout({ children }) {
           rel="stylesheet"
         />
       </Head>
-      <Navbar />
-      {children}
+      <div className="min-w-full flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+      </div>
     </>
   );
 }

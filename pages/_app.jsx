@@ -1,5 +1,5 @@
-import '../styles/globals.css';
 import 'windi.css';
+import '../styles/globals.css';
 import Layout from '#components/Layout';
 import { appWithTranslation } from 'next-i18next';
 
