@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Navbar from '#components/Navbar';
+import SEO from '#components/SEO';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
@@ -8,6 +9,7 @@ export default function Home() {
   const { t } = useTranslation('home');
   return (
     <>
+      <SEO title="Home" />
       <header className="relative grid w-full place-items-center h-[34rem] pt-24">
         <div
           className="bg bg-fixed bg-center absolute inset-0 -z-5"
