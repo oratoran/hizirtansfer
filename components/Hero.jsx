@@ -43,7 +43,7 @@ export default function Hero() {
           autoplay={{ delay: 5000 }}
           fadeEffect={{ crossFade: true }}
           loop
-          onSlideChange={swiper => resetAnimation(swiper.el)}
+          onSlideChange={(swiper) => resetAnimation(swiper.el)}
         >
           <SwiperSlide>
             <img

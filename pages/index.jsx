@@ -1,10 +1,7 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Navbar from '#components/Navbar';
-import Hero from '#components/Hero';
-import SEO from '#components/SEO';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Hero from '#components/Hero';
+import SEO from '#components/SEO';
 
 function ServiceBox({ src, alt, title, desc }) {
   return (

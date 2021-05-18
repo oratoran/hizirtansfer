@@ -12,5 +12,19 @@ module.exports = {
     ecmaVersion: 12,
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'import/extensions': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        extensions: ['.jsx', '.js', '.svg'],
+        map: [
+          ['#components', './components'],
+          ['#icons', './icons'],
+        ],
+      },
+    },
+  },
 };
