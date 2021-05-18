@@ -58,7 +58,9 @@ export default function Footer() {
       </div>
       <div className="bg-gray-900 text-center py-6 text-white">
         <span>Copyright &copy; 2021 - </span>
-        <span className="text-yellow-300 font-sans font-medium">HizirTransfer</span>
+        <span className="text-yellow-300 font-sans font-medium">
+          HizirTransfer
+        </span>
       </div>
     </footer>
   );

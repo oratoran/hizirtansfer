@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed text-white border-b-2 transition-all duration-300 w-screen h-22 z-5 text-white
+      className={`fixed text-white border-b-2 transition-all duration-300 w-screen h-22 z-20 text-white
         ${
           isScrolledDown
             ? 'text-gray-700 bg-white'
