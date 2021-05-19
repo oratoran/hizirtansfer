@@ -1,0 +1,7 @@
+{
+  "services": {
+    "airport": "Havaalanı Transferi",
+    "business": "İş Transferi",
+    "events": "Etkinlikler ve Düğün"
+  }
+}

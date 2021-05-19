@@ -5,7 +5,7 @@ import Clock from '#icons/clock.svg';
 
 function ContactCard({ topLabel, bottomLabel, icon, className = '' }) {
   return (
-    <div className={'text-center text-yellow-400 ' + className}>
+    <div className={`text-center text-yellow-400 ${className}`}>
       {icon}
       <span className="block mt-6 text-white font-medium font-lora">
         {topLabel}
