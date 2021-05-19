@@ -6,10 +6,10 @@ SwiperCore.use([Autoplay, EffectFade]);
 
 export default function Hero() {
   const resetAnimation = (el) => {
-    el.classList.remove(`anim`);
+    el.classList.remove('anim');
     /* eslint-disable */
     void el.offsetWidth;
-    el.classList.add(`anim`);
+    el.classList.add('anim');
   };
 
   const { t } = useTranslation('home');
@@ -20,6 +20,7 @@ export default function Hero() {
         .anim {
           animation: 15s linear 0s infinite normal zoomin;
         }
+
         @keyframes zoomin {
           0% {
             transform: scale(1);
@@ -47,8 +48,8 @@ export default function Hero() {
           effect="fade"
           autoplay={{ delay: 5000 }}
           fadeEffect={{ crossFade: true }}
-          loop
           onSlideChange={(swiper) => resetAnimation(swiper.el)}
+          loop
         >
           <SwiperSlide>
             <img
