@@ -1,4 +1,9 @@
 {
+  "hero": {
+    "limo": "Limousine",
+    "sub": "Enjoy the ride",
+    "subsub": "for your success in Business"
+  },
   "services": {
     "airport": "Airport Transfer",
     "business": "Business Transfer",

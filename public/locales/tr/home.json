@@ -1,4 +1,9 @@
 {
+  "hero": {
+    "limo": "Limuzin",
+    "sub": "Sürüş keyfi",
+    "subsub": "İş dünyasındaki başarınız için"
+  },
   "services": {
     "airport": "Havaalanı Transferi",
     "business": "İş Transferi",

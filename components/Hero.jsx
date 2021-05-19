@@ -1,14 +1,19 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectFade } from 'swiper/core';
+import { useTranslation } from 'next-i18next';
 
 SwiperCore.use([Autoplay, EffectFade]);
 
 export default function Hero() {
-  const resetAnimation = (el, idx) => {
+  const resetAnimation = (el) => {
     el.classList.remove(`anim`);
+    /* eslint-disable */
     void el.offsetWidth;
     el.classList.add(`anim`);
   };
+
+  const { t } = useTranslation('home');
+
   return (
     <>
       <style jsx>{`
@@ -27,13 +32,13 @@ export default function Hero() {
       <header className="relative grid w-full place-items-center h-[42rem] pt-24 overflow-hidden">
         <div className="pt-20 w-full max-w-screen-xl mx-auto px-8 justify-self-start z-5 mt-10">
           <h1 className="text-yellow-200 font-lora font-semibold text-[9rem] z-5">
-            Limousine
+            {t('hero.limo')}
           </h1>
           <h2 className="mt-2 text-gray-100 font-lora font-medium text-8xl z-5">
-            Enjoy the ride
+            {t('hero.sub')}
           </h2>
           <span className="block mt-6 text-gray-100 font-lora font-medium text-4xl z-5">
-            for your success in Business
+            {t('hero.subsub')}
           </span>
         </div>
         <Swiper
