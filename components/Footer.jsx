@@ -26,7 +26,7 @@ export default function Footer() {
         backgroundSize: 'contain',
       }}
     >
-      <div className="max-w-screen-lg w-full mx-auto py-8 flex-1">
+      <div className="max-w-screen-xl w-full mx-auto py-8 flex-1">
         <h1 className="font-medium text-2xl text-center text-white font-lora mb-10">
           HizirTransfer
         </h1>

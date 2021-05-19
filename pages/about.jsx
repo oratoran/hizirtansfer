@@ -30,7 +30,7 @@ export default function About() {
       </header>
 
       <div className="bg-white">
-        <article className="max-w-screen-lg grid grid-cols-2 pt-10 mx-auto">
+        <article className="max-w-screen-xl grid grid-cols-2 pt-10 mx-auto">
           <div className="px-4">
             <p className="text-lg leading-relaxed">
               Ipsum laborum exercitationem libero eveniet aliquid voluptatem

@@ -29,7 +29,7 @@ export default function Navbar() {
           : 'linear-gradient( to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))',
       }}
     >
-      <div className="max-w-screen-lg px-4 grid grid-cols-3 justify-center items-center mx-auto h-full">
+      <div className="max-w-screen-xl px-4 grid grid-cols-3 justify-center items-center mx-auto h-full">
         <h1 className="font-bold font-lora text-xl">HizirTransfer</h1>
         <div className="font-sans flex items-center justify-between">
           {['home', 'about', 'contact', 'services'].map((r, idx) => (

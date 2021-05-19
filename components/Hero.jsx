@@ -25,7 +25,7 @@ export default function Hero() {
         }
       `}</style>
       <header className="relative grid w-full place-items-center h-[42rem] pt-24 overflow-hidden">
-        <div className="pt-20 w-full max-w-screen-lg mx-auto px-8 justify-self-start z-5 mt-10">
+        <div className="pt-20 w-full max-w-screen-xl mx-auto px-8 justify-self-start z-5 mt-10">
           <h1 className="text-yellow-200 font-lora font-semibold text-[9rem] z-5">
             Limousine
           </h1>

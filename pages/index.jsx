@@ -24,6 +24,7 @@ function ServiceBox({ src, alt, title, desc }) {
   );
 }
 
+ServiceBox.propTypes = {
 export default function Home() {
   const { t } = useTranslation('home');
   return (
@@ -32,15 +33,16 @@ export default function Home() {
       <Hero />
 
       <div className="bg-true-gray-800 p-8">
-        <div className="w-full max-w-screen-lg mx-auto grid grid-cols-3">
+        <div className="w-full max-w-screen-xl mx-auto grid grid-cols-3">
           <ServiceBox
             src="/assets/one.jpg"
             title="Airport Transfers"
             desc=" Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
+            title={t('services.airport')}
+            desc="Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
           />
           <ServiceBox
             src="/assets/two.jpg"
-            title="Business Transfers"
             desc=" Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
           />
           <ServiceBox
@@ -50,7 +52,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <section className="max-w-screen-lg mx-auto h-[32rem] px-4 py-8">
+      <section className="max-w-screen-xl mx-auto h-[32rem] px-4 py-8">
         <p className="leading-relaxed">
           Ipsum voluptas laborum officia voluptatum a illum Nulla culpa
           consequuntur ipsum nam beatae Qui blanditiis maxime sint harum
