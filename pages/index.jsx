@@ -1,15 +1,16 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Hero from '#components/Hero';
 import SEO from '#components/SEO';
 
-function ServiceBox({ src, alt, title, desc }) {
+function ServiceBox({ src, title, desc }) {
   return (
     <div className="flex items-start gap-4 p-4">
       <img
         className="rounded-full w-20 object-cover"
         src={src}
-        alt="alt"
+        alt={title}
         style={{ aspectRatio: '1 / 1' }}
       />
       <div>
@@ -25,6 +26,11 @@ function ServiceBox({ src, alt, title, desc }) {
 }
 
 ServiceBox.propTypes = {
+  title: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+};
+
 export default function Home() {
   const { t } = useTranslation('home');
   return (
@@ -36,19 +42,21 @@ export default function Home() {
         <div className="w-full max-w-screen-xl mx-auto grid grid-cols-3">
           <ServiceBox
             src="/assets/one.jpg"
-            title="Airport Transfers"
-            desc=" Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
+            alt={t('services.airport')}
             title={t('services.airport')}
             desc="Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
           />
           <ServiceBox
             src="/assets/two.jpg"
-            desc=" Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
+            alt={t('services.business')}
+            title={t('services.business')}
+            desc="Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
           />
           <ServiceBox
             src="/assets/three.jpg"
-            title="Events & Wedding"
-            desc=" Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
+            alt={t('services.events')}
+            title={t('services.events')}
+            desc="Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
           />
         </div>
       </div>
