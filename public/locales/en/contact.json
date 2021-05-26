@@ -1,0 +1,18 @@
+{
+  "title": "Contact Us",
+  "parent": "Home",
+  "details": {
+    "location": "Location",
+    "phones": "Phones",
+    "email": "Email",
+    "working_hours": "Working Hours"
+  },
+  "form": {
+    "title": "Send Message",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Message",
+    "submit": "Submit"
+  }
+}
+

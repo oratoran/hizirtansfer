@@ -1,0 +1,17 @@
+{
+  "title": "Bize Ulaşın",
+  "parent": "Ev",
+  "details": {
+    "location": "Yer",
+    "phones": "Telefonlar",
+    "email": "E-posta",
+    "working_hours": "Çalışma Saatleri"
+  },
+  "form": {
+    "title": "Mesaj Gönder",
+    "name": "Adınız",
+    "email": "E-posta adresiniz",
+    "message": "İleti",
+    "submit": "Sunmak"
+  }
+}

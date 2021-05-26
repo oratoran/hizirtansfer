@@ -1,12 +1,14 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import SEO from '#components/SEO';
 
 export default function About() {
   const { t } = useTranslation('about');
 
   return (
     <>
-      <header className="relative grid w-full place-items-center h-[30rem] pt-24">
+      <SEO title={t('title')} />
+      <header className="relative grid w-full place-items-center h-[32rem] pt-24">
         <div
           className="bg bg-fixed bg-center absolute inset-0 -z-5"
           style={{
@@ -23,48 +25,73 @@ export default function About() {
             <span className="text-amber-300 font-medium text-md">
               {t('parent')}
             </span>
-            <span className="text-gray-400 font-bold text-sm">{'//'}</span>
+            <span className="text-gray-400 font-bold text-sm">&#47;&#47;</span>
             <span className="text-white text-md">{t('title')}</span>
           </div>
         </div>
       </header>
 
-      <div className="bg-white">
-        <article className="max-w-screen-xl grid grid-cols-2 pt-10 mx-auto">
+      <div className="bg-white py-10">
+        <article className="max-w-screen-xl grid grid-cols-2 mx-auto">
           <div className="px-4">
-            <p className="text-lg leading-relaxed">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis. Itaque libero incidunt maiores
-              hic id praesentium? Consequatur obcaecati officiis porro ab
-              consectetur!
+            <span className="block font-lora font-semibold text-3xl mb-6">
+              Every day help for our customers
+            </span>
+            <p className="text-lg leading-loose mb-4">
+              Adipisicing inventore adipisicing sint quasi aut Dignissimos
+              delectus excepturi doloribus amet eveniet Voluptates sapiente
+              molestias sequi dolore reprehenderit maiores magnam? Inventore at
+              nihil quam repellat fuga ipsa Quae quis blanditiis.
             </p>
-            <p className="text-lg leading-relaxed">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis. Itaque libero incidunt maiores
-              hic id praesentium? Consequatur obcaecati officiis porro ab
-              consectetur!
+            <ul className="font-sans list-none list-inside">
+              {['Management', 'Analytics', 'Consultation', 'Engineering'].map(
+                (item, idx) => (
+                  <li className="flex gap-2 text-lg mt-2" key={idx}>
+                    <span className="font-bold text-yellow-600">&#10003;</span>
+                    <span>{item}</span>
+                  </li>
+                )
+              )}
+            </ul>
+            <span className="block font-lora font-semibold text-3xl mt-8 mb-6">
+              If you need more help
+            </span>
+            <p className="text-lg leading-loose mb-4">
+              Adipisicing inventore adipisicing sint quasi aut Dignissimos
+              delectus excepturi doloribus amet eveniet Voluptates sapiente
+              molestias sequi dolore.
             </p>
-            <p className="text-lg leading-relaxed">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis. Itaque libero incidunt maiores
-              hic id praesentium? Consequatur obcaecati officiis porro ab
-              consectetur!
-            </p>
+            <button
+              type="button"
+              className="block px-6 py-3 bg-yellow-400 font-lora text-xl"
+            >
+              Read More
+            </button>
           </div>
           <div className="px-4">
-            <p>
+            <p className="leading-loose font-sans text-lg mb-6">
               Ipsum laborum exercitationem libero eveniet aliquid voluptatem
               Fugiat accusamus dolore voluptatem sunt eum repellat cumque
               Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis. Itaque libero incidunt maiores
-              hic id praesentium? Consequatur obcaecati officiis porro ab
-              consectetur!
+              deserunt temporibus perspiciatis.
+            </p>
+            <p className="leading-loose font-sans text-lg mb-6">
+              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
+              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
+              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
+              deserunt temporibus perspiciatis.
+            </p>
+            <p className="leading-loose font-sans text-lg mb-6">
+              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
+              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
+              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
+              deserunt temporibus perspiciatis.
+            </p>
+            <p className="leading-loose font-sans text-lg mb-6">
+              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
+              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
+              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
+              deserunt temporibus perspiciatis.
             </p>
           </div>
         </article>
