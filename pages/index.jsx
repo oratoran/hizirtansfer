@@ -38,7 +38,7 @@ export default function Home() {
       <SEO title="Home" />
       <Hero />
       <div className="bg-true-gray-800 px-4 py-10">
-        <div className="w-full max-w-screen-lg mx-auto grid grid-cols-3">
+        <div className="w-full max-w-screen-lg mx-auto grid grid-rows-3 md:(grid-cols-3 grid-rows-1)">
           <ServiceBox
             src="/assets/one.jpg"
             alt={t('services.airport')}
@@ -59,14 +59,15 @@ export default function Home() {
           />
         </div>
       </div>
+
       <section
-        className="max-w-screen-xl mx-auto h-[32rem] px-4 py-8 flex items-center gap-6"
+        className="max-w-screen-xl mx-auto min-h-[32rem] px-4 py-8 grid grid-rows-2 md:(grid-cols-2 grid-rows-1) items-center md:gap-6"
         style={{
           backgroundImage: "url('/assets/worldmap.png')",
           backgroundSize: 'cover',
         }}
       >
-        <div className="flex-1">
+        <div className="<md:(row-start-2 row-end-3)">
           <span
             className="block font-lora text-[3.5rem] font-medium text-gray-800 mb-4"
             style={{ lineHeight: '1.25em' }}
@@ -79,22 +80,23 @@ export default function Home() {
             sunt quaerat atque deleniti? Molestiae deserunt similique
             consequuntur temporibus blanditiis possimus.
           </span>
-          <button type="button" className="block px-6 py-3 bg-yellow-300 font-lora text-xl">
+          <button
+            type="button"
+            className="block px-6 py-3 bg-yellow-300 font-lora text-xl"
+          >
             Read More
           </button>
         </div>
-        <div className="flex-1">
-          <div className="p-2 bg-white shadow-lg">
-            <iframe
-              width="100%"
-              height="400"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+        <div className="p-2 bg-white shadow-lg <md:(row-start-1 row-end-2)">
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </section>
     </>
