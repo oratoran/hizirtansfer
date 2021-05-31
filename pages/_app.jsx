@@ -1,8 +1,7 @@
 import 'windi.css';
 import '../styles/globals.css';
-import Layout from '#components/Layout';
 import { appWithTranslation } from 'next-i18next';
-import 'swiper/swiper-bundle.min.css';
+import Layout from '#components/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (

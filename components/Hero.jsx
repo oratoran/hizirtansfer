@@ -1,23 +1,35 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, EffectFade } from 'swiper/core';
 import { useTranslation } from 'next-i18next';
-
-SwiperCore.use([Autoplay, EffectFade]);
-
-const resetAnimation = (el) => {
-  el.classList.remove('anim');
-  /* eslint-disable */
-  void el.offsetWidth;
-  el.classList.add('anim');
-};
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
   const { t } = useTranslation('home');
+  const [active, setActive] = useState(1);
+
+  const resetAnimation = (el) => {
+    el.classList.remove(`anim`);
+    /* eslint-disable */
+    void el.offsetWidth;
+    el.classList.add(`anim`);
+  };
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.anim');
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i === 3) i = 0;
+      setActive(i);
+      resetAnimation(elements[i]);
+      i++;
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <style jsx>{`
         .anim {
-          animation: 15s linear 0s infinite normal zoomin;
+          animation: 20s linear 0s infinite normal zoomin;
         }
 
         @keyframes zoomin {
@@ -29,8 +41,8 @@ export default function Hero() {
           }
         }
       `}</style>
-      <header className="relative grid w-full place-items-center h-[42rem] pt-24 overflow-hidden">
-        <div className="pt-20 w-full max-w-screen-xl mx-auto px-8 justify-self-start z-5 mt-10">
+      <header className="relative grid w-full place-items-center h-[42rem] pt-20 overflow-hidden">
+        <div className="w-full max-w-screen-xl mx-auto px-8 justify-self-start z-5 mt-10">
           <h1 className="text-yellow-200 font-lora font-semibold text-6xl md:text-[9rem] z-5">
             {t('hero.limo')}
           </h1>
@@ -41,49 +53,41 @@ export default function Hero() {
             {t('hero.subsub')}
           </span>
         </div>
-        <Swiper
-          spaceBetween={0}
-          slidesPerView={1}
-          effect="fade"
-          autoplay={{ delay: 5000 }}
-          fadeEffect={{ crossFade: true }}
-          onSlideChange={(swiper) => resetAnimation(swiper.el)}
-          loop
-        >
-          <SwiperSlide>
-            <img
-              className="anim object-bottom"
-              src="/assets/limo.jpg"
-              alt="limo"
-              style={{
-                filter:
-                  'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
-              }}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="anim object-bottom"
-              src="/assets/side_limo.jpg"
-              alt="side_limo"
-              style={{
-                filter:
-                  'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
-              }}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="anim object-bottom"
-              src="/assets/limo_closeup.jpg"
-              alt="limo_closeup"
-              style={{
-                filter:
-                  'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
-              }}
-            />
-          </SwiperSlide>
-        </Swiper>
+        <div className="absolute inset-0">
+          <img
+            className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-5 ${
+              active === 0 ? 'visible' : 'invisible'
+            }`}
+            src="/assets/limo.jpg"
+            alt="limo"
+            style={{
+              filter:
+                'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
+            }}
+          />
+          <img
+            className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-4 ${
+              active === 1 ? 'visible' : 'invisible'
+            }`}
+            src="/assets/side_limo.jpg"
+            alt="side_limo"
+            style={{
+              filter:
+                'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
+            }}
+          />
+          <img
+            className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-3 ${
+              active === 2 ? 'visible' : 'invisible'
+            }`}
+            src="/assets/limo_closeup.jpg"
+            alt="limo_closeup"
+            style={{
+              filter:
+                'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
+            }}
+          />
+        </div>
       </header>
     </>
   );
