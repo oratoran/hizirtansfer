@@ -5,23 +5,7 @@ import Clock from '#icons/clock_alt.svg';
 import Location from '#icons/location_alt.svg';
 import Mail from '#icons/mail_alt.svg';
 import Phone from '#icons/phone_alt.svg';
-
-function ContactCard({ label, topLabel, bottomLabel, icon, className = '' }) {
-  return (
-    <div className={`text-center text-yellow-500 ${className}`}>
-      {icon}
-      <span className="block mt-6 text-gray-800 font-bold text-xl font-lora">
-        {label}
-      </span>
-      <span className="block mt-4 text-gray-800 font-medium font-lora">
-        {topLabel}
-      </span>
-      <span className="block text-gray-800 font-medium font-lora">
-        {bottomLabel}
-      </span>
-    </div>
-  );
-}
+import ContactCard from '#components/ContactCard';
 
 export default function Contact() {
   const { t } = useTranslation('contact');
