@@ -2,8 +2,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import SEO from '#components/SEO';
 
-export default function About() {
-  const { t } = useTranslation('about');
+export default function Services() {
+  const { t } = useTranslation('services');
 
   return (
     <>
@@ -102,6 +102,6 @@ export default function About() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['navbar', 'about'])),
+    ...(await serverSideTranslations(locale, ['navbar', 'services'])),
   },
 });
