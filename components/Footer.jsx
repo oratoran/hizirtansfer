@@ -6,13 +6,7 @@ import ContactCard from '#components/ContactCard';
 
 export default function Footer() {
   return (
-    <footer
-      className="flex flex-col bg-gray-800 min-h-[20rem]"
-      style={{
-        backgroundImage: 'url(/assets/world.png)',
-        backgroundSize: 'contain',
-      }}
-    >
+    <footer className="flex flex-col bg-true-gray-800 min-h-[20rem]">
       <div className="max-w-screen-xl w-full mx-auto py-8 flex-1">
         <h1 className="font-medium text-2xl text-center text-white font-lora mb-10">
           HizirTransfer
@@ -22,21 +16,21 @@ export default function Footer() {
             icon={<Phone width="24px" />}
             topLabel="0(550) 680-34-12"
             bottomLabel="Round-the-clock"
-            className="border-dashed py-6 <md:border-b-2 md:border-r-2 border-gray-500 border-opacity-40"
+            className="border-dashed py-6 <md:border-b-2 md:border-r-2 border-true-gray-500 border-opacity-40"
             type="footer"
           />
           <ContactCard
             icon={<Location width="24px" />}
             topLabel="Somewhere In Turkey"
             bottomLabel="123456"
-            className="border-dashed py-6 <md:border-b-2 md:border-r-2 border-gray-500 border-opacity-40"
+            className="border-dashed py-6 <md:border-b-2 md:border-r-2 border-true-gray-500 border-opacity-40"
             type="footer"
           />
           <ContactCard
             icon={<Mail width="24px" />}
             topLabel="info@hizirtransfer.com"
             bottomLabel="support@hizirtransfer.com"
-            className="border-dashed py-6 <md:border-b-2 border-r-2 border-gray-500 border-opacity-40"
+            className="border-dashed py-6 <md:border-b-2 border-r-2 border-true-gray-500 border-opacity-40"
             type="footer"
           />
           <ContactCard
@@ -48,7 +42,7 @@ export default function Footer() {
           />
         </div>
       </div>
-      <div className="bg-gray-900 text-center py-6 text-white">
+      <div className="bg-true-gray-900 text-center py-6 text-white">
         <span>Copyright &copy; 2021 - </span>
         <span className="text-yellow-300 font-sans font-medium">
           HizirTransfer
