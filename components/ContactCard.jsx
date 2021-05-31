@@ -38,7 +38,8 @@ ContactCard.propTypes = {
   label: PropTypes.string,
   topLabel: PropTypes.string.isRequired,
   bottomLabel: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  icon: PropTypes.object.isRequired,
   className: PropTypes.string,
   type: PropTypes.string.isRequired,
 };

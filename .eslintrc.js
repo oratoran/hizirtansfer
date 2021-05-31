@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'import/extensions': 'off',
+    'react/no-array-index-key': 'off',
   },
   settings: {
     'import/resolver': {

@@ -33,9 +33,11 @@ export default function Navbar() {
         }}
       >
         <div className="max-w-screen-xl px-4 grid grid-cols-3 justify-center items-center mx-auto h-full">
-          <h1 className="font-bold font-lora text-xl <sm:(col-start-2 col-end-3)">
-            HizirTransfer
-          </h1>
+          <Link href="/">
+            <h1 className="font-bold font-lora text-xl <sm:(col-start-2 col-end-3)">
+              HizirTransfer
+            </h1>
+          </Link>
           <div className="font-sans flex items-center justify-between <sm:hidden">
             {['home', 'about', 'contact', 'services'].map((r, idx) => (
               <Link href={`/${r === 'home' ? '' : r}`} key={idx}>
