@@ -1,4 +1,8 @@
 {
   "title": "Services",
-  "parent": "Home"
+  "parent": "Home",
+  "testimoni": {
+    "pre-title": "What Our Customers Say",
+    "title": "What Our Customers Say"
+  }
 }

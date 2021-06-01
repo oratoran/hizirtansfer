@@ -2,6 +2,20 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import SEO from '#components/SEO';
 
+function TestimoniCard({ content, name, middle }) {
+  return (
+    <div className={`px-6 pt-10 pb-16 ${middle ? 'bg-gray-100' : ''}`}>
+      <span className="block text-6xl font-sans font-bold text-yellow-400 italic ">
+        &quot;
+      </span>
+      <p className="font-sans text-gray-600">{content}</p>
+      <span className="block font-medium text-gray-800 mt-10 font-lora text-md">
+        {name}
+      </span>
+    </div>
+  );
+}
+
 export default function Services() {
   const { t } = useTranslation('services');
 
@@ -31,70 +45,48 @@ export default function Services() {
         </div>
       </header>
 
-      <div className="bg-white py-10">
-        <article className="max-w-screen-xl grid <md:grid-rows-2 md:grid-cols-2 mx-auto">
-          <div className="px-4">
-            <span className="block font-lora font-semibold text-3xl mb-6">
-              Every day help for our customers
-            </span>
-            <p className="text-lg leading-loose mb-4">
-              Adipisicing inventore adipisicing sint quasi aut Dignissimos
-              delectus excepturi doloribus amet eveniet Voluptates sapiente
-              molestias sequi dolore reprehenderit maiores magnam? Inventore at
-              nihil quam repellat fuga ipsa Quae quis blanditiis.
-            </p>
-            <ul className="font-sans list-none list-inside">
-              {['Management', 'Analytics', 'Consultation', 'Engineering'].map(
-                (item, idx) => (
-                  <li className="flex gap-2 text-lg mt-2" key={idx}>
-                    <span className="font-bold text-yellow-600">&#10003;</span>
-                    <span>{item}</span>
-                  </li>
-                )
-              )}
-            </ul>
-            <span className="block font-lora font-semibold text-3xl mt-8 mb-6">
-              If you need more help
-            </span>
-            <p className="text-lg leading-loose mb-4">
-              Adipisicing inventore adipisicing sint quasi aut Dignissimos
-              delectus excepturi doloribus amet eveniet Voluptates sapiente
-              molestias sequi dolore.
-            </p>
-            <button
-              type="button"
-              className="block px-6 py-3 bg-yellow-400 font-lora text-xl"
-            >
-              Read More
-            </button>
-          </div>
-          <div className="px-4">
-            <p className="leading-loose font-sans text-lg mb-6">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis.
-            </p>
-            <p className="leading-loose font-sans text-lg mb-6">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis.
-            </p>
-            <p className="leading-loose font-sans text-lg mb-6">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis.
-            </p>
-            <p className="leading-loose font-sans text-lg mb-6">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis.
-            </p>
-          </div>
-        </article>
+      <style jsx>{`
+        .title::before {
+          content: '';
+          position: absolute;
+          left: 18rem;
+          right: 18rem;
+          bottom: -0.75rem;
+          height: 3px;
+          background-color: #e5e7eb;
+        }
+        .title::after {
+          content: '';
+          position: absolute;
+          left: 25rem;
+          right: 25rem;
+          bottom: -0.75rem;
+          height: 3px;
+          background-color: #fcd34d;
+        }
+      `}</style>
+      <div className="pt-10 pb-20 px-4 max-w-screen-lg mx-auto text-center">
+        <span className="block mb-2 text-2xl font-semibold font-lora italic text-yellow-400">
+          Testimonials
+        </span>
+        <h1 className="title relative mb-12 text-4xl font-lora font-bold text-gray-800">
+          {t('testimoni.title')}
+        </h1>
+        <div className="grid grid-cols-3 gap-8 w-full">
+          <TestimoniCard
+            content="Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque."
+            name="Stefanie Rashford"
+          />
+          <TestimoniCard
+            content="Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque."
+            name="Patric Stone"
+            middle
+          />
+          <TestimoniCard
+            content="Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque."
+            name="Hugo James"
+          />
+        </div>
       </div>
     </>
   );

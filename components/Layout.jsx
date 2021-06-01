@@ -1,6 +1,6 @@
+import Head from 'next/head';
 import Navbar from '#components/Navbar';
 import Footer from '#components/Footer';
-import Head from 'next/head';
 
 export default function Layout({ children }) {
   return (
@@ -12,11 +12,11 @@ export default function Layout({ children }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Lora,ital:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans,ital&display=swap"
           rel="stylesheet"
         />
       </Head>
