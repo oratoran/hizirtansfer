@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Hero from '#components/Hero';
@@ -24,12 +23,6 @@ function ServiceBox({ src, title, desc }) {
     </div>
   );
 }
-
-ServiceBox.propTypes = {
-  title: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-};
 
 export default function Home() {
   const { t } = useTranslation('home');

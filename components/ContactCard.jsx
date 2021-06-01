@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 function ContactCard({
   label = '',
   topLabel,
@@ -33,19 +31,5 @@ function ContactCard({
     </div>
   );
 }
-
-ContactCard.propTypes = {
-  label: PropTypes.string,
-  topLabel: PropTypes.string.isRequired,
-  bottomLabel: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  icon: PropTypes.object.isRequired,
-  className: PropTypes.string,
-  type: PropTypes.string.isRequired,
-};
-ContactCard.defaultProps = {
-  className: '',
-  label: '',
-};
 
 export default ContactCard;

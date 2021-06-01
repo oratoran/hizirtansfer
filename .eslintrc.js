@@ -16,6 +16,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/extensions': 'off',
     'react/no-array-index-key': 'off',
+    'react/prop-types': 'off',
   },
   settings: {
     'import/resolver': {
