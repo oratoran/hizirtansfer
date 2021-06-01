@@ -87,9 +87,9 @@ export default function Contact() {
         }
       `}</style>
       <div className="pt-10 pb-20 px-4 max-w-screen-md mx-auto text-center">
-        <h2 className="title relative mb-8 text-4xl font-lora font-bold text-gray-800">
+        <h1 className="title relative mb-8 text-4xl font-lora font-bold text-gray-800">
           {t('form.title')}
-        </h2>
+        </h1>
         <form className="grid grid-cols-2 gap-4">
           <input
             className="p-6 py-4 border-3 border-gray-200 grid-col-1 outline-none"
