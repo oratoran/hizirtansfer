@@ -11,8 +11,10 @@ export default function Navbar() {
   const { t } = useTranslation('navbar');
 
   useEffect(() => {
-    window.addEventListener('scroll', () =>
-      setScrolledDown(window.pageYOffset > 80)
+    window.addEventListener(
+      'scroll',
+      () => setScrolledDown(window.pageYOffset > 80),
+      { passive: true }
     );
   }, []);
 
