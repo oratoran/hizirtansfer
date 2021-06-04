@@ -1,3 +1,4 @@
+import { ReactYouTubeLite } from 'react-youtube-lite';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Hero from '#components/Hero';
@@ -7,10 +8,12 @@ function ServiceBox({ src, title, desc }) {
   return (
     <div className="flex items-start gap-4 p-4">
       <img
-        className="rounded-full w-20 object-cover"
+        className="rounded-full w-20 h-20 object-cover"
         src={src}
         alt={title}
         style={{ aspectRatio: '1 / 1' }}
+        width="80"
+        height="80"
       />
       <div>
         <span className="block font-lora font-medium text-2xl text-yellow-200">
@@ -81,14 +84,9 @@ export default function Home() {
           </button>
         </div>
         <div className="p-2 bg-white shadow-lg <md:(row-start-1 row-end-2)">
-          <iframe
-            width="100%"
-            height="400"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+          <ReactYouTubeLite
+            url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            title="Hizirtransfer Service"
           />
         </div>
       </section>
