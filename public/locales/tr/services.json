@@ -1,4 +1,22 @@
 {
-  "title": "Hizmetler",
-  "parent": "Ev"
+  "title": "Services",
+  "parent": "Home",
+  "testimoni": {
+    "pre-title": "Testimonials",
+    "title": "What Our Customers Say",
+    "items": {
+      "first": {
+        "content": "Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque.",
+        "name": "Stefanie Rashford"
+      },
+      "second": {
+        "content": "Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque.",
+        "name": "Patric Stone"
+      },
+      "third": {
+        "content": "Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque.",
+        "name": "Hugo James"
+      }
+    }
+  }
 }

@@ -37,21 +37,21 @@ export default function Home() {
         <div className="w-full max-w-screen-lg mx-auto grid grid-rows-3 md:(grid-cols-3 grid-rows-1)">
           <ServiceBox
             src="/assets/one.jpg"
-            alt={t('services.airport')}
-            title={t('services.airport')}
-            desc="Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
+            alt={t('services.airport.title')}
+            title={t('services.airport.title')}
+            desc={t('services.airport.desc')}
           />
           <ServiceBox
             src="/assets/two.jpg"
-            alt={t('services.business')}
-            title={t('services.business')}
-            desc="Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
+            alt={t('services.business.title')}
+            title={t('services.business.title')}
+            desc={t('services.business.desc')}
           />
           <ServiceBox
             src="/assets/three.jpg"
-            alt={t('services.events')}
-            title={t('services.events')}
-            desc="Sit temporibus non eius voluptatum sequi eum necessitatibus minus? Quibusdam!"
+            alt={t('services.events.title')}
+            title={t('services.events.title')}
+            desc={t('services.business.desc')}
           />
         </div>
       </div>
@@ -68,19 +68,17 @@ export default function Home() {
             className="block font-lora text-[3.5rem] font-medium text-gray-800 mb-4"
             style={{ lineHeight: '1.25em' }}
           >
-            <span className="block text-yellow-400">Luxury Cars</span>
-            for Maximum Satisfacion
+            <span className="block text-yellow-400">{t('promo.title')}</span>
+            {t('promo.subtitle')}
           </span>
           <span className="block font-sans text-lg text-gray-800 leading-loose mb-6">
-            Lorem debitis praesentium consequatur dolor quisquam. Fugiat officia
-            sunt quaerat atque deleniti? Molestiae deserunt similique
-            consequuntur temporibus blanditiis possimus.
+            {t('promo.desc')}
           </span>
           <button
             type="button"
             className="block px-6 py-3 bg-yellow-300 font-lora text-xl"
           >
-            Read More
+            {t('promo.cta')}
           </button>
         </div>
         <div className="p-2 bg-white shadow-lg <md:(row-start-1 row-end-2)">

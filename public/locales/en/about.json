@@ -1,4 +1,27 @@
 {
   "title": "About Us",
-  "parent": "Home"
+  "parent": "Home",
+  "left": {
+    "top": {
+      "title": "Every day help for our customers",
+      "desc": "Adipisicing inventore adipisicing sint quasi aut Dignissimos delectus excepturi doloribus amet eveniet Voluptates sapiente molestias sequi dolore reprehenderit maiores magnam? Inventore at nihil quam repellat fuga ipsa Quae quis blanditiis.",
+      "items": {
+        "first": "Management",
+        "second": "Analytics",
+        "third": "Consultation",
+        "fourth": "Engineering"
+      }
+    },
+    "help": {
+      "title": "If you need more help",
+      "desc": "Adipisicing inventore adipisicing sint quasi aut Dignissimos delectus excepturi doloribus amet eveniet Voluptates sapiente molestias sequi dolore.",
+      "cta": "Read More"
+    }
+  },
+  "right": {
+    "first": "Ipsum laborum exercitationem libero eveniet aliquid voluptatem Fugiat accusamus dolore voluptatem sunt eum repellat cumque Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa deserunt temporibus perspiciatis.",
+    "second": "Ipsum laborum exercitationem libero eveniet aliquid voluptatem Fugiat accusamus dolore voluptatem sunt eum repellat cumque Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa deserunt temporibus perspiciatis.",
+    "third": "Ipsum laborum exercitationem libero eveniet aliquid voluptatem Fugiat accusamus dolore voluptatem sunt eum repellat cumque Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa deserunt temporibus perspiciatis.",
+    "fourth": "Ipsum laborum exercitationem libero eveniet aliquid voluptatem Fugiat accusamus dolore voluptatem sunt eum repellat cumque Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa deserunt temporibus perspiciatis."
+  }
 }

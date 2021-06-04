@@ -35,63 +35,45 @@ export default function About() {
         <article className="max-w-screen-xl grid <md:grid-rows-2 md:grid-cols-2 mx-auto">
           <div className="px-4">
             <span className="block font-lora font-semibold text-3xl mb-6">
-              Every day help for our customers
+              {t('left.top.title')}
             </span>
-            <p className="text-lg leading-loose mb-4">
-              Adipisicing inventore adipisicing sint quasi aut Dignissimos
-              delectus excepturi doloribus amet eveniet Voluptates sapiente
-              molestias sequi dolore reprehenderit maiores magnam? Inventore at
-              nihil quam repellat fuga ipsa Quae quis blanditiis.
-            </p>
+            <p className="text-lg leading-loose mb-4">{t('left.top.desc')}</p>
             <ul className="font-sans list-none list-inside">
-              {['Management', 'Analytics', 'Consultation', 'Engineering'].map(
-                (item, idx) => (
-                  <li className="flex gap-2 text-lg mt-2" key={idx}>
-                    <span className="font-bold text-yellow-600">&#10003;</span>
-                    <span>{item}</span>
-                  </li>
-                )
-              )}
+              {[
+                t('left.top.items.first'),
+                t('left.top.items.second'),
+                t('left.top.items.third'),
+                t('left.top.items.fourth'),
+              ].map((item, idx) => (
+                <li className="flex gap-2 text-lg mt-2" key={idx + 1}>
+                  <span className="font-bold text-yellow-600">&#10003;</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
             <span className="block font-lora font-semibold text-3xl mt-8 mb-6">
-              If you need more help
+              {t('left.help.title')}
             </span>
-            <p className="text-lg leading-loose mb-4">
-              Adipisicing inventore adipisicing sint quasi aut Dignissimos
-              delectus excepturi doloribus amet eveniet Voluptates sapiente
-              molestias sequi dolore.
-            </p>
+            <p className="text-lg leading-loose mb-4">{t('left.top.desc')}</p>
             <button
               type="button"
               className="block px-6 py-3 bg-yellow-400 font-lora text-xl"
             >
-              Read More
+              {t('left.help.cta')}
             </button>
           </div>
           <div className="px-4">
             <p className="leading-loose font-sans text-lg mb-6">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis.
+              {t('right.first')}
             </p>
             <p className="leading-loose font-sans text-lg mb-6">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis.
+              {t('right.second')}
             </p>
             <p className="leading-loose font-sans text-lg mb-6">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis.
+              {t('right.third')}
             </p>
             <p className="leading-loose font-sans text-lg mb-6">
-              Ipsum laborum exercitationem libero eveniet aliquid voluptatem
-              Fugiat accusamus dolore voluptatem sunt eum repellat cumque
-              Provident fugiat nisi ab hic aliquid. Sequi assumenda culpa
-              deserunt temporibus perspiciatis.
+              {t('right.fourth')}
             </p>
           </div>
         </article>

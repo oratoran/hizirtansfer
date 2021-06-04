@@ -5,8 +5,23 @@
     "subsub": "for your success in Business"
   },
   "services": {
-    "airport": "Airport Transfer",
-    "business": "Business Transfer",
-    "events": "Events & Wedding"
+    "airport": {
+      "title": "Airport Transfer",
+      "desc": "This is the description for the airport blah blah blah"
+    },
+    "business": {
+      "title": "Business Transfer",
+      "desc": "This is the description for the business blah blah blah"
+    },
+    "events": {
+      "title": "Events & Wedding",
+      "desc": "This is the description for the events blah blah blah"
+    }
+  },
+  "promo": {
+    "title": "Luxury Cars",
+    "subtitle": "for Maximum Satisfacion",
+    "desc": "Lorem debitis praesentium consequatur dolor quisquam. Fugiat officia sunt quaerat atque deleniti? Molestiae deserunt similique consequuntur temporibus blanditiis possimus.",
+    "cta": "Read More"
   }
 }

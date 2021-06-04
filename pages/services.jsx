@@ -67,24 +67,24 @@ export default function Services() {
       `}</style>
       <div className="pt-10 pb-20 px-4 max-w-screen-lg mx-auto text-center">
         <span className="block mb-2 text-2xl font-semibold font-lora italic text-yellow-400">
-          Testimonials
+          {t('testimoni.pre-title')}
         </span>
         <h1 className="title relative mb-12 text-4xl font-lora font-bold text-gray-800">
           {t('testimoni.title')}
         </h1>
         <div className="grid grid-cols-3 gap-8 w-full">
           <TestimoniCard
-            content="Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque."
-            name="Stefanie Rashford"
+            content={t('testimoni.items.first.content')}
+            name={t('testimoni.items.first.name')}
           />
           <TestimoniCard
-            content="Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque."
-            name="Patric Stone"
+            content={t('testimoni.items.second.content')}
+            name={t('testimoni.items.second.name')}
             middle
           />
           <TestimoniCard
-            content="Amet optio quis nulla commodi consectetur! Suscipit adipisci quos possimus velit illo corporis consequatur Nemo officia ipsam ea cupiditate eveniet culpa Itaque."
-            name="Hugo James"
+            content={t('testimoni.items.third.content')}
+            name={t('testimoni.items.third.name')}
           />
         </div>
       </div>
