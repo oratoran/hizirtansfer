@@ -111,7 +111,7 @@ export default function Services() {
           right: 25rem;
           bottom: -0.75rem;
           height: 3px;
-          background-color: #fcd34d;
+          background-color: #E6C473;
         }
       `}</style>
       <div className="pt-10 pb-20 px-4 max-w-screen-lg mx-auto text-center">

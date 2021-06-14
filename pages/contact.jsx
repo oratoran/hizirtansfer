@@ -84,7 +84,7 @@ export default function Contact() {
           right: 18.5rem;
           bottom: -0.75rem;
           height: 3px;
-          background-color: #fcd34d;
+          background-color: #E6C473;
         }
       `}</style>
       <div className="pt-10 pb-20 px-4 max-w-screen-md mx-auto text-center">
@@ -109,7 +109,7 @@ export default function Contact() {
             rows="10"
           />
           <button
-            className="px-8 py-4 bg-yellow-300 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl font-medium col-start-1 col-end-3"
+            className="px-8 py-4 bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl font-medium col-start-1 col-end-3"
             type="submit"
           >
             {t('form.submit')}
