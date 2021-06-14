@@ -36,33 +36,34 @@ export default function Contact() {
         </div>
       </header>
 
-      <div className="grid grid-cols-4 py-10">
+      <div className="grid <md:grid-rows-4 md:grid-cols-4 py-10">
         <ContactCard
           icon={<Location width="32px" />}
           label={t('details.location')}
           topLabel="Somewhere In Turkey"
           bottomLabel="123456"
-          className="border-dashed border-r-2 border-gray-500 border-opacity-40"
+          className="border-dashed <md:(border-b-2 py-6) md:border-r-2 border-gray-500 border-opacity-40"
         />
         <ContactCard
           icon={<Phone width="32px" />}
           label={t('details.phones')}
           topLabel="0(550) 680-34-12"
           bottomLabel="Round-the-clock"
-          className="border-dashed border-r-2 border-gray-500 border-opacity-40"
+          className="border-dashed <md:(border-b-2 py-6) md:border-r-2 border-gray-500 border-opacity-40"
         />
         <ContactCard
           icon={<Mail width="32px" />}
           label={t('details.email')}
           topLabel="info@hizirtransfer.com"
           bottomLabel="support@hizirtransfer.com"
-          className="border-dashed border-r-2 border-gray-500 border-opacity-40"
+          className="border-dashed <md:(border-b-2 py-6) md:border-r-2 border-gray-500 border-opacity-40"
         />
         <ContactCard
           icon={<Clock width="32px" />}
           label={t('details.working_hours')}
           topLabel="Opening Hours"
           bottomLabel="07:00 - 16:00"
+          className="<md:py-6"
         />
       </div>
 
