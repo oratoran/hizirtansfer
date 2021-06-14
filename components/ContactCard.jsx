@@ -17,7 +17,7 @@ function ContactCard({
       </span>
     </div>
   ) : (
-    <div className={`text-center text-yellow-500 ${className}`}>
+    <div className={`text-center text-yellow-400 ${className}`}>
       {icon}
       <span className="block mt-6 text-gray-800 font-bold text-xl font-lora">
         {label}

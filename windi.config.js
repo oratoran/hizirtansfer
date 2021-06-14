@@ -8,6 +8,11 @@ export default defineConfig({
         lora: ['Lora', 'serif'],
         sans: ['Open Sans', 'serif'],
       },
+      colors: {
+        yellow: {
+          400: '#D9B65F',
+        },
+      },
     },
   },
   variants: {
