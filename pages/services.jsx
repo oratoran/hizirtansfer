@@ -2,10 +2,32 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import SEO from '#components/SEO';
 
+function FeatureCard({ title, desc, img, reversed }) {
+  return (
+    <div
+      className={`flex ${
+        reversed
+          ? '<md:flex-col md:flex-row-reverse'
+          : '<md:flex-col md:flex-row'
+      } w-full gap-8 my-10`}
+    >
+      <img
+        className="block <md:w-full md:w-96 rounded-md shadow-lg object-cover"
+        src={img}
+        style={{ aspectRatio: '16/9' }}
+      />
+      <div className="flex flex-col justify-center gap-4">
+        <h1 className="font-lora font-semibold text-2xl">{title}</h1>
+        <p className="font-sans leading-relaxed">{desc}</p>
+      </div>
+    </div>
+  );
+}
+
 function TestimoniCard({ content, name, middle }) {
   return (
-    <div className={`px-6 pt-10 pb-16 ${middle ? 'bg-gray-100' : ''}`}>
-      <span className="block text-6xl font-sans font-bold text-yellow-400 italic ">
+    <div className={`px-6 pt-10 pb-14 ${middle ? 'bg-gray-100' : ''}`}>
+      <span className="block text-6xl font-lora font-bold text-yellow-400 italic">
         &quot;
       </span>
       <p className="font-sans text-gray-600">{content}</p>
@@ -45,6 +67,31 @@ export default function Services() {
         </div>
       </header>
 
+      <section className="max-w-screen-lg mx-auto px-4 py-10">
+        <FeatureCard
+          title={t('showcase.first.title')}
+          desc={t('showcase.first.desc')}
+          img="/assets/white_seat.jpg"
+        />
+        <FeatureCard
+          title={t('showcase.second.title')}
+          desc={t('showcase.second.desc')}
+          img="/assets/amber_seat.jpg"
+          reversed
+        />
+        <FeatureCard
+          title={t('showcase.third.title')}
+          desc={t('showcase.third.desc')}
+          img="/assets/blue_seat.jpg"
+        />
+        <FeatureCard
+          title={t('showcase.fourth.title')}
+          desc={t('showcase.fourth.desc')}
+          img="/assets/brown_seat.jpg"
+          reversed
+        />
+      </section>
+
       <style jsx>{`
         .title::before {
           content: '';
@@ -72,7 +119,7 @@ export default function Services() {
         <h1 className="title relative mb-12 text-4xl font-lora font-bold text-gray-800">
           {t('testimoni.title')}
         </h1>
-        <div className="grid grid-cols-3 gap-8 w-full">
+        <div className="grid <md:grid-rows-3 md:grid-cols-3 gap-8 w-full">
           <TestimoniCard
             content={t('testimoni.items.first.content')}
             name={t('testimoni.items.first.name')}

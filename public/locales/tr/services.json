@@ -1,6 +1,24 @@
 {
   "title": "Services",
   "parent": "Home",
+  "showcase": {
+    "first": {
+      "title": "Some Fancy Feature Here",
+      "desc": "Consectetur dignissimos ut vero aspernatur ex. Quas eaque vero voluptas facere eum perferendis? Esse dicta totam neque accusamus dolor? Necessitatibus unde laboriosam sequi sed quas debitis? Soluta temporibus in incidunt libero mollitia eius eum? Autem ullam veniam nulla similique consectetur."
+    },
+    "second": {
+      "title": "Another Fancy Thing",
+      "desc": "Consectetur dignissimos ut vero aspernatur ex. Quas eaque vero voluptas facere eum perferendis? Esse dicta totam neque accusamus dolor? Necessitatibus unde laboriosam sequi sed quas debitis? Soluta temporibus in incidunt libero mollitia eius eum? Autem ullam veniam nulla similique consectetur."
+    },
+    "third": {
+      "title": "Lorem Ipsum Blah Blah",
+      "desc": "Consectetur dignissimos ut vero aspernatur ex. Quas eaque vero voluptas facere eum perferendis? Esse dicta totam neque accusamus dolor? Necessitatibus unde laboriosam sequi sed quas debitis? Soluta temporibus in incidunt libero mollitia eius eum? Autem ullam veniam nulla similique consectetur."
+    },
+    "fourth": {
+      "title": "Amazing Stuff Goes Here",
+      "desc": "Consectetur dignissimos ut vero aspernatur ex. Quas eaque vero voluptas facere eum perferendis? Esse dicta totam neque accusamus dolor? Necessitatibus unde laboriosam sequi sed quas debitis? Soluta temporibus in incidunt libero mollitia eius eum? Autem ullam veniam nulla similique consectetur."
+    }
+  },
   "testimoni": {
     "pre-title": "Testimonials",
     "title": "What Our Customers Say",
