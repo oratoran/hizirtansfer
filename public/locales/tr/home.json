@@ -23,5 +23,17 @@
     "subtitle": "for Maximum Satisfacion",
     "desc": "Lorem debitis praesentium consequatur dolor quisquam. Fugiat officia sunt quaerat atque deleniti? Molestiae deserunt similique consequuntur temporibus blanditiis possimus.",
     "cta": "Read More"
+  },
+  "features": {
+    "title": "We ensure you will get the best trip experience",
+    "limo": "Best Limousine Choices",
+    "phone": "Quick Call Center Response",
+    "time": "Fast Limousine Delivery",
+    "seat": "High Safety and Comfortable Seat",
+    "price": "Best Price Offer Out There",
+    "driver": "Professional Licensed Driver"
+  },
+  "contact": {
+    "call": "Call to book an order:"
   }
 }
