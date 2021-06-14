@@ -69,7 +69,7 @@ export default function Home() {
       </div>
 
       <section
-        className="max-w-screen-xl mx-auto min-h-[32rem] px-4 py-10 grid grid-rows-2 md:(grid-cols-2 grid-rows-1) items-center md:gap-6"
+        className="max-w-screen-xl mx-auto min-h-[32rem] px-4 py-10 grid <md:grid-rows-[1fr,2fr] md:(grid-cols-2 grid-rows-1) items-center md:gap-6"
         style={{
           backgroundImage: "url('/assets/worldmap.png')",
           backgroundSize: 'cover',
@@ -77,18 +77,18 @@ export default function Home() {
       >
         <div className="<md:(row-start-2 row-end-3)">
           <span
-            className="block font-lora text-[3.5rem] font-medium text-gray-800 mb-4"
+            className="block font-lora text-[3.5rem] font-medium text-gray-800 mb-4 <md:text-center"
             style={{ lineHeight: '1.25em' }}
           >
             <span className="block text-yellow-400">{t('promo.title')}</span>
             {t('promo.subtitle')}
           </span>
-          <span className="block font-sans text-lg text-gray-800 leading-loose mb-6">
+          <span className="block font-sans text-lg text-gray-800 leading-loose mb-6 <md:text-center">
             {t('promo.desc')}
           </span>
           <button
             type="button"
-            className="block px-6 py-3 bg-yellow-400 font-lora text-xl"
+            className="block px-6 py-3 bg-yellow-400 font-lora text-xl <md:mx-auto"
           >
             {t('promo.cta')}
           </button>
