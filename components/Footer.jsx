@@ -37,7 +37,7 @@ export default function Footer() {
             icon={<Clock width="24px" />}
             topLabel="Opening Hours"
             bottomLabel="07:00 - 16:00"
-            className="py-6 md:py-0"
+            className="py-6 <md:py-0"
             type="footer"
           />
         </div>
