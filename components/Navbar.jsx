@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import Facebook from '#icons/facebook.svg';
 import Twitter from '#icons/twitter.svg';
-import Whatsapp from '#icons/whatsapp.svg';
+import Chat from '#icons/chat.svg';
 
 export default function Navbar() {
   const [isScrolledDown, setScrolledDown] = useState(false);
@@ -78,7 +78,7 @@ export default function Navbar() {
                 href="https://facebook.com"
                 className={isScrolledDown ? 'text-gray-700' : 'text-white'}
               >
-                <Whatsapp />
+                <Chat />
               </a>
             </Link>
           </div>
