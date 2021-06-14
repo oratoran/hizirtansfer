@@ -1,6 +1,7 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import SEO from '#components/SEO';
+import Link from 'next/link';
 
 export default function About() {
   const { t } = useTranslation('about');
@@ -55,12 +56,14 @@ export default function About() {
               {t('left.help.title')}
             </span>
             <p className="text-lg leading-loose mb-4">{t('left.top.desc')}</p>
-            <button
-              type="button"
-              className="block px-6 py-3 bg-yellow-400 font-lora text-xl"
-            >
-              {t('left.help.cta')}
-            </button>
+            <Link href="/contact">
+              <a
+                type="button"
+                className="inline px-6 py-3 bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl"
+              >
+                {t('left.help.cta')}
+              </a>
+            </Link>
           </div>
           <div className="px-4">
             <p className="leading-loose font-sans text-lg mb-6">

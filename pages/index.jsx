@@ -1,6 +1,7 @@
 import { ReactYouTubeLite } from 'react-youtube-lite';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Link from 'next/link';
 import Hero from '#components/Hero';
 import SEO from '#components/SEO';
 import Limo from '#icons/limo.svg';
@@ -86,12 +87,14 @@ export default function Home() {
           <span className="block font-sans text-lg text-gray-800 leading-loose mb-6 <md:text-center">
             {t('promo.desc')}
           </span>
-          <button
-            type="button"
-            className="block px-6 py-3 bg-yellow-400 font-lora text-xl <md:mx-auto"
-          >
-            {t('promo.cta')}
-          </button>
+          <Link href="/services">
+            <a
+              href="/services"
+              className="inline px-6 py-3 bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl <md:mx-auto"
+            >
+              {t('promo.cta')}
+            </a>
+          </Link>
         </div>
         <div className="p-2 bg-white shadow-lg <md:(row-start-1 row-end-2)">
           <ReactYouTubeLite
@@ -259,7 +262,7 @@ export default function Home() {
                   </select>
                 </div>
                 <button
-                  className="col-start-1 col-end-3 row-start-5 block px-6 py-3 bg-yellow-400 font-lora text-xl"
+                  className="col-start-1 col-end-3 row-start-5 block px-6 py-3 bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl"
                   role="submit"
                 >
                   Get Limousine

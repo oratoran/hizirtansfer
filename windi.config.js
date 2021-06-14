@@ -10,7 +10,7 @@ export default defineConfig({
       },
       colors: {
         yellow: {
-          400: '#D9B65F',
+          400: '#E6C473',
         },
       },
     },

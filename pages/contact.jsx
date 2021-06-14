@@ -108,7 +108,7 @@ export default function Contact() {
             rows="10"
           />
           <button
-            className="px-8 py-4 bg-yellow-300 hover:bg-yellow-400 font-lora text-xl font-medium col-start-1 col-end-3"
+            className="px-8 py-4 bg-yellow-300 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl font-medium col-start-1 col-end-3"
             type="submit"
           >
             {t('form.submit')}
