@@ -32,7 +32,7 @@ export default function About() {
       </header>
 
       <div className="bg-white py-10">
-        <article className="max-w-screen-xl grid <md:grid-rows-2 md:grid-cols-2 mx-auto">
+        <article className="max-w-screen-xl grid <md:(grid-rows-auto gap-10) md:grid-cols-2 mx-auto">
           <div className="px-4">
             <span className="block font-lora font-semibold text-3xl mb-6">
               {t('left.top.title')}
