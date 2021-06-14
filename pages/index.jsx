@@ -171,14 +171,15 @@ export default function Home() {
         <div className="min-h-[32rem] grid <md:(grid-rows-2) md:grid-cols-2 md:gap-12 items-center max-w-screen-xl mx-auto">
           <div className="flex flex-col justify-center mx-auto max-w-lg md:h-full">
             <h1 className="text-4xl font-lora font-medium mb-6 md:leading-relaxed <md:text-center">
-              Use our{' '}
-              <span className="text-yellow-400">quick booking form </span> to
-              get a limousine
+              {t('contact.title.use')}
+              <span className="text-yellow-400">
+                {' '}
+                {t('contact.title.form')}
+              </span>
+              {t('contact.title.limo')}
             </h1>
             <p className="leading-loose text-gray-800 <md:text-center">
-              Lorem debitis praesentium consequatur dolor quisquam. Fugiat
-              officia sunt quaerat atque deleniti? Molestiae deserunt similique
-              consequuntur.
+              {t('contact.desc')}
             </p>
             <div className="grid grid-cols-[4rem,1fr] grid-rows-[2rem,2rem] col-gap-4 <md:mx-auto mt-12 text-yellow-400">
               <Whatsapp width="4rem" height="4rem" />
@@ -263,7 +264,7 @@ export default function Home() {
                 </div>
                 <button
                   className="col-start-1 col-end-3 row-start-5 block px-6 py-3 bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl"
-                  role="submit"
+                  type="submit"
                 >
                   Get Limousine
                 </button>

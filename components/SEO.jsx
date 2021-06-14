@@ -13,7 +13,7 @@ export default function SEO({ title, thumbnail }) {
       </title>
       <link
         rel="canonical"
-        href={`https://hizirtransfer.com/${route.locale}/${route.pathname}`}
+        href={`https://hizirtransfer.com/${route.locale}${route.pathname}`}
       />
       <meta name="description" content={desc} />
       <meta name="keywords" content={keywords.join(',').toLowerCase()} />

@@ -59,6 +59,7 @@ export default function Navbar() {
           <div className="flex items-center justify-end gap-5 <sm:hidden">
             <Link href="https://facebook.com">
               <a
+                aria-label="facebook"
                 href="https://facebook.com"
                 className={isScrolledDown ? 'text-gray-700' : 'text-white'}
               >
@@ -67,7 +68,8 @@ export default function Navbar() {
             </Link>
             <Link href="https://twitter.com">
               <a
-                href="https://facebook.com"
+                aria-label="twitter"
+                href="https://twitter.com"
                 className={isScrolledDown ? 'text-gray-700' : 'text-white'}
               >
                 <Twitter />
@@ -75,7 +77,8 @@ export default function Navbar() {
             </Link>
             <Link href="https://whatsapp.com">
               <a
-                href="https://facebook.com"
+                aria-label="whatsapp"
+                href="https://whatsapp.com"
                 className={isScrolledDown ? 'text-gray-700' : 'text-white'}
               >
                 <Chat />
@@ -84,6 +87,7 @@ export default function Navbar() {
           </div>
           <button
             type="button"
+            aria-label="mobile menu"
             onClick={() => setToggled((prev) => !prev)}
             className="<md:(grid col-start-3 col-end-4) hidden grid-rows-3 gap-2 justify-self-end gap-1 w-8 h-4"
           >
