@@ -15,6 +15,8 @@ function FeatureCard({ title, desc, img, reversed }) {
         className="block <md:w-full md:w-96 rounded-md shadow-lg object-cover"
         src={img}
         style={{ aspectRatio: '16/9' }}
+        width="1600"
+        height="900"
       />
       <div className="flex flex-col justify-center gap-4">
         <h1 className="font-lora font-semibold text-2xl">{title}</h1>

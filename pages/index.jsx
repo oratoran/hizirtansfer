@@ -111,6 +111,8 @@ export default function Home() {
               className="w-[30rem] h-[32rem] absolute object-cover"
               src="/assets/seat.jpg"
               alt="Limousine Seat"
+              width="100"
+              height="400"
             />
           </div>
 
