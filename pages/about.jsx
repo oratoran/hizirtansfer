@@ -59,7 +59,7 @@ export default function About() {
             <Link href="/contact">
               <a
                 type="button"
-                className="inline px-6 py-3 bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl"
+                className="inline-block px-6 py-3 <md:mx-auto bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl"
               >
                 {t('left.help.cta')}
               </a>

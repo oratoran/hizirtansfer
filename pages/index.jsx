@@ -76,21 +76,21 @@ export default function Home() {
           backgroundSize: 'cover',
         }}
       >
-        <div className="<md:(row-start-2 row-end-3)">
+        <div className="<md:(row-start-2 row-end-3 text-center)">
           <span
-            className="block font-lora text-[3.5rem] font-medium text-gray-800 mb-4 <md:text-center"
+            className="block font-lora text-[3.5rem] font-medium text-gray-800 mb-4"
             style={{ lineHeight: '1.25em' }}
           >
             <span className="block text-yellow-400">{t('promo.title')}</span>
             {t('promo.subtitle')}
           </span>
-          <span className="block font-sans text-lg text-gray-800 leading-loose mb-6 <md:text-center">
+          <span className="block font-sans text-lg text-gray-800 leading-loose mb-6">
             {t('promo.desc')}
           </span>
           <Link href="/services">
             <a
               href="/services"
-              className="inline px-6 py-3 bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl <md:mx-auto"
+              className="inline px-6 py-3 <md:mx-auto bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl <md:mx-auto"
             >
               {t('promo.cta')}
             </a>
