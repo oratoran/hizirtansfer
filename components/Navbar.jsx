@@ -112,6 +112,7 @@ export default function Navbar() {
               <a
                 href={`/${r === 'home' ? '' : r}`}
                 className="text-2xl transition-color duration-100 ease-in text-gray-700 hover:(text-amber-600 underline)"
+                onClick={() => setToggled((prev) => !prev)}
               >
                 {t(r)}
               </a>
