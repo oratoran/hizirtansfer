@@ -21,7 +21,7 @@ import People from '#icons/people.svg';
 function ServiceBox({ src, title, desc }) {
   return (
     <div className="flex items-start gap-4 p-4">
-      <Image
+      <img
         className="rounded-full w-20 h-20 object-cover"
         src={src}
         alt={title}
@@ -112,6 +112,7 @@ export default function Home() {
             <Image
               className="w-[30rem] h-[32rem] absolute object-cover"
               src="/assets/seat.jpg"
+              layout="fill"
               alt="Limousine Seat"
             />
           </div>

@@ -61,6 +61,7 @@ export default function Hero() {
             }`}
             src="/assets/limo.jpg"
             alt="limo"
+            layout="fill"
             style={{
               filter:
                 'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
@@ -72,6 +73,7 @@ export default function Hero() {
             }`}
             src="/assets/side_limo.jpg"
             alt="side_limo"
+            layout="fill"
             style={{
               filter:
                 'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
@@ -82,6 +84,7 @@ export default function Hero() {
               active === 2 ? 'visible' : 'invisible'
             }`}
             src="/assets/limo_closeup.jpg"
+            layout="fill"
             alt="limo_closeup"
             style={{
               filter:
