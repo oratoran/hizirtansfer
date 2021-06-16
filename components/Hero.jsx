@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
 
@@ -54,7 +55,7 @@ export default function Hero() {
           </span>
         </div>
         <div className="absolute inset-0">
-          <img
+          <Image
             className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-5 ${
               active === 0 ? 'visible' : 'invisible'
             }`}
@@ -65,7 +66,7 @@ export default function Hero() {
                 'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
             }}
           />
-          <img
+          <Image
             className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-4 ${
               active === 1 ? 'visible' : 'invisible'
             }`}
@@ -76,7 +77,7 @@ export default function Hero() {
                 'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
             }}
           />
-          <img
+          <Image
             className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-3 ${
               active === 2 ? 'visible' : 'invisible'
             }`}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ReactYouTubeLite } from 'react-youtube-lite';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -20,13 +21,11 @@ import People from '#icons/people.svg';
 function ServiceBox({ src, title, desc }) {
   return (
     <div className="flex items-start gap-4 p-4">
-      <img
+      <Image
         className="rounded-full w-20 h-20 object-cover"
         src={src}
         alt={title}
         style={{ aspectRatio: '1 / 1' }}
-        width="80"
-        height="80"
       />
       <div>
         <span className="block font-lora font-medium text-2xl text-yellow-200">
@@ -110,12 +109,10 @@ export default function Home() {
         </h1>
         <div className="grid grid-rows-2 md:(grid-cols-2 grid-rows-1) max-w-screen-xl mx-auto h-full">
           <div className="<md:hidden relative justify-center flex h-full">
-            <img
+            <Image
               className="w-[30rem] h-[32rem] absolute object-cover"
               src="/assets/seat.jpg"
               alt="Limousine Seat"
-              width="100"
-              height="400"
             />
           </div>
 

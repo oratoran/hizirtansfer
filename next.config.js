@@ -4,23 +4,23 @@ const { i18n } = require('./next-i18next.config');
 
 module.exports = {
   i18n,
-  webpack5: true,
-  webpack: (config) => {
+  webpack5: false,
+  webpack: config => {
     config.plugins.push(
       new WindiCSSWebpackPlugin({
         scan: {
           dirs: ['./'],
-          exclude: ['node_modules', '.git', '.next/**/*'],
-        },
+          exclude: ['node_modules', '.git', '.next/**/*']
+        }
       })
     );
     config.module.rules.push({
       test: /\.svg$/,
-      use: ['@svgr/webpack'],
+      use: ['@svgr/webpack']
     });
-    ['components', 'icons'].forEach((alias) => {
+    ['components', 'icons'].forEach(alias => {
       config.resolve.alias[`#${alias}`] = path.resolve(__dirname, `${alias}/`);
     });
     return config;
-  },
+  }
 };

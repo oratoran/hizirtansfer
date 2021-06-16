@@ -1,3 +1,4 @@
+/* eslint-disable */
 import 'windi.css';
 import '../styles/globals.css';
 import { appWithTranslation } from 'next-i18next';

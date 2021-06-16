@@ -1,7 +1,7 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import SEO from '#components/SEO';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import SEO from '#components/SEO';
 
 export default function About() {
   const { t } = useTranslation('about');
@@ -15,7 +15,7 @@ export default function About() {
           style={{
             backgroundImage: 'url("/assets/limo.jpg")',
             filter:
-              'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
+              'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)'
           }}
         />
         <div className="flex flex-col gap-6">
@@ -44,7 +44,7 @@ export default function About() {
                 t('left.top.items.first'),
                 t('left.top.items.second'),
                 t('left.top.items.third'),
-                t('left.top.items.fourth'),
+                t('left.top.items.fourth')
               ].map((item, idx) => (
                 <li className="flex gap-2 text-lg mt-2" key={idx + 1}>
                   <span className="font-bold text-yellow-600">&#10003;</span>
@@ -59,6 +59,7 @@ export default function About() {
             <Link href="/contact">
               <a
                 type="button"
+                href="/contact"
                 className="inline-block px-6 py-3 <md:mx-auto bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl"
               >
                 {t('left.help.cta')}
@@ -87,6 +88,6 @@ export default function About() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['navbar', 'about'])),
-  },
+    ...(await serverSideTranslations(locale, ['navbar', 'about']))
+  }
 });

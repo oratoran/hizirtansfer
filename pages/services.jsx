@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import SEO from '#components/SEO';
@@ -11,12 +12,11 @@ function FeatureCard({ title, desc, img, reversed }) {
           : '<md:flex-col md:flex-row'
       } w-full gap-8 my-10`}
     >
-      <img
+      <Image
         className="block <md:w-full md:w-96 rounded-md shadow-lg object-cover"
         src={img}
+        alt={title}
         style={{ aspectRatio: '16/9' }}
-        width="1600"
-        height="900"
       />
       <div className="flex flex-col justify-center gap-4">
         <h1 className="font-lora font-semibold text-2xl">{title}</h1>
