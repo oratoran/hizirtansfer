@@ -41,21 +41,21 @@ export default function Hero() {
           }
         }
       `}</style>
-      <header className="relative grid w-full place-items-center h-[42rem] pt-20 overflow-hidden">
-        <div className="w-full max-w-screen-xl mx-auto px-8 justify-self-start z-5 mt-10">
-          <h1 className="text-yellow-200 font-lora font-semibold text-6xl md:text-[9rem] z-5">
+      <header className="grid overflow-hidden relative place-items-center pt-20 w-full h-[42rem]">
+        <div className="justify-self-start px-8 mx-auto mt-10 w-full max-w-screen-xl z-5">
+          <h1 className="text-6xl font-semibold text-yellow-200 font-lora md:text-[9rem] z-5">
             {t('hero.limo')}
           </h1>
-          <h2 className="mt-2 text-gray-100 font-lora font-medium text-4xl md:text-8xl z-5">
+          <h2 className="mt-2 text-4xl font-medium text-gray-100 font-lora md:text-8xl z-5">
             {t('hero.sub')}
           </h2>
-          <span className="block mt-6 text-gray-100 font-lora font-medium text-2xl md:text-4xl z-5">
+          <span className="block mt-6 text-2xl font-medium text-gray-100 font-lora md:text-4xl z-5">
             {t('hero.subsub')}
           </span>
         </div>
         <div className="absolute inset-0">
           <img
-            className={`anim object-bottom absolute w-screen h-screen md:h-auto object-cover z-[-5] ${
+            className={`object-cover object-bottom absolute w-screen h-screen anim md:h-auto z-[-5] ${
               active === 0 ? 'visible' : 'invisible'
             }`}
             src="/assets/limo.jpg"
@@ -66,7 +66,7 @@ export default function Hero() {
             }}
           />
           <img
-            className={`anim object-bottom absolute w-screen h-screen md:h-auto object-cover z-[-4] ${
+            className={`object-cover object-bottom absolute w-screen h-screen anim md:h-auto z-[-4] ${
               active === 1 ? 'visible' : 'invisible'
             }`}
             src="/assets/side_limo.jpg"
@@ -77,7 +77,7 @@ export default function Hero() {
             }}
           />
           <img
-            className={`anim object-bottom absolute w-screen h-screen md:h-auto object-cover z-[-3] ${
+            className={`object-cover object-bottom absolute w-screen h-screen anim md:h-auto z-[-3] ${
               active === 2 ? 'visible' : 'invisible'
             }`}
             src="/assets/limo_closeup.jpg"

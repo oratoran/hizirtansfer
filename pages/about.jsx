@@ -9,9 +9,9 @@ export default function About() {
   return (
     <>
       <SEO title={t('title')} />
-      <header className="relative grid w-full place-items-center h-[32rem] pt-24">
+      <header className="grid relative place-items-center pt-24 w-full h-[32rem]">
         <div
-          className="bg bg-fixed bg-center absolute inset-0 z-[-5]"
+          className="absolute inset-0 bg-fixed bg-center bg z-[-5]"
           style={{
             backgroundImage: 'url("/assets/limo.jpg")',
             filter:
@@ -19,26 +19,26 @@ export default function About() {
           }}
         />
         <div className="flex flex-col gap-6">
-          <h1 className="font-lora font-medium text-6xl text-white">
+          <h1 className="text-6xl font-medium text-white font-lora">
             {t('title')}
           </h1>
-          <div className="flex items-center justify-center gap-4 font-sans">
-            <span className="text-yellow-400 font-medium text-md">
+          <div className="flex gap-4 justify-center items-center font-sans">
+            <span className="font-medium text-yellow-400 text-md">
               {t('parent')}
             </span>
-            <span className="text-gray-400 font-bold text-sm">&#47;&#47;</span>
+            <span className="text-sm font-bold text-gray-400">&#47;&#47;</span>
             <span className="text-white text-md">{t('title')}</span>
           </div>
         </div>
       </header>
 
-      <div className="bg-white py-10 text-true-gray-800">
-        <article className="max-w-screen-xl grid grid-rows-auto gap-10 md:grid-cols-2 mx-auto">
+      <div className="py-10 text-true-gray-800 bg-white">
+        <article className="grid gap-10 mx-auto max-w-screen-xl grid-rows-auto md:grid-cols-2">
           <div className="p-4">
-            <span className="block font-lora font-semibold text-3xl mb-6">
+            <span className="block mb-6 text-3xl font-semibold font-lora">
               {t('left.top.title')}
             </span>
-            <p className="text-lg leading-loose mb-4">{t('left.top.desc')}</p>
+            <p className="mb-4 text-lg leading-loose">{t('left.top.desc')}</p>
             <ul className="font-sans list-none list-inside">
               {[
                 t('left.top.items.first'),
@@ -46,37 +46,37 @@ export default function About() {
                 t('left.top.items.third'),
                 t('left.top.items.fourth')
               ].map((item, idx) => (
-                <li className="flex gap-2 text-lg mt-2" key={idx + 1}>
+                <li className="flex gap-2 mt-2 text-lg" key={idx + 1}>
                   <span className="font-bold text-yellow-600">&#10003;</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
-            <span className="block font-lora font-semibold text-3xl mt-8 mb-6">
+            <span className="block mt-8 mb-6 text-3xl font-semibold font-lora">
               {t('left.help.title')}
             </span>
-            <p className="text-lg leading-loose mb-4">{t('left.top.desc')}</p>
+            <p className="mb-4 text-lg leading-loose">{t('left.top.desc')}</p>
             <Link href="/contact">
               <a
                 type="button"
                 href="/contact"
-                className="inline-block px-6 py-3 mx-auto md:mx-0 bg-yellow-400 hover:bg-true-gray-800 hover:text-yellow-400 transition-colors ease-out delay-50 font-lora text-xl"
+                className="inline-block py-3 px-6 mx-auto text-xl bg-yellow-400 transition-colors ease-out md:mx-0 hover:bg-true-gray-800 hover:text-yellow-400 delay-50 font-lora"
               >
                 {t('left.help.cta')}
               </a>
             </Link>
           </div>
           <div className="p-4">
-            <p className="leading-loose font-sans text-lg mb-6">
+            <p className="mb-6 font-sans text-lg leading-loose">
               {t('right.first')}
             </p>
-            <p className="leading-loose font-sans text-lg mb-6">
+            <p className="mb-6 font-sans text-lg leading-loose">
               {t('right.second')}
             </p>
-            <p className="leading-loose font-sans text-lg mb-6">
+            <p className="mb-6 font-sans text-lg leading-loose">
               {t('right.third')}
             </p>
-            <p className="leading-loose font-sans text-lg mb-6">
+            <p className="mb-6 font-sans text-lg leading-loose">
               {t('right.fourth')}
             </p>
           </div>

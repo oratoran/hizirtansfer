@@ -21,11 +21,11 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed text-white border-b-2 transition-all duration-300 w-screen h-[5.25rem] z-40 text-white
+        className={`fixed z-40 w-screen text-white border-b-2 transition-all duration-300 h-[5.25rem]
         ${
           isScrolledDown || isToggled
-            ? 'border-solid border-gray-200 text-true-gray-800 bg-white'
-            : 'border-dashed border-gray-200 border-opacity-40'
+            ? 'text-true-gray-800 bg-white border-gray-200 border-solid'
+            : 'border-gray-200 border-opacity-40 border-dashed'
         }`}
         style={{
           backgroundImage:
@@ -34,13 +34,13 @@ export default function Navbar() {
               : 'linear-gradient( to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))'
         }}
       >
-        <div className="max-w-screen-xl px-4 grid grid-cols-3 justify-center items-center mx-auto h-full">
+        <div className="grid grid-cols-3 justify-center items-center px-4 mx-auto max-w-screen-xl h-full">
           <Link href="/">
-            <h1 className="font-bold font-lora text-xl col-start-2 col-end-3 md:col-start-auto md:col-end-auto">
+            <h1 className="col-start-2 col-end-3 text-xl font-bold font-lora md:col-start-auto md:col-end-auto">
               HizirTransfer
             </h1>
           </Link>
-          <div className="md:flex hidden font-sans items-center justify-between">
+          <div className="hidden justify-between items-center font-sans md:flex">
             {['home', 'about', 'contact', 'services'].map((r, idx) => (
               <Link href={`/${r === 'home' ? '' : r}`} key={idx}>
                 <a
@@ -56,7 +56,7 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-          <div className="md:flex hidden items-center justify-end gap-5">
+          <div className="hidden gap-5 justify-end items-center md:flex">
             <Link href="https://facebook.com">
               <a
                 aria-label="facebook"
@@ -91,7 +91,7 @@ export default function Navbar() {
             type="button"
             aria-label="mobile menu"
             onClick={() => setToggled(prev => !prev)}
-            className="grid col-start-3 col-end-4 md:hidden grid-rows-3 gap-2 justify-self-end gap-1 w-8 h-4"
+            className="grid col-start-3 col-end-4 grid-rows-3 gap-1 gap-2 justify-self-end w-8 h-4 md:hidden"
           >
             <span
               className={`${
@@ -112,7 +112,7 @@ export default function Navbar() {
         </div>
       </nav>
       {isToggled && (
-        <div className="fixed z-20 inset-0 bg-white flex flex-col items-center justify-center gap-8">
+        <div className="flex fixed inset-0 z-20 flex-col gap-8 justify-center items-center bg-white">
           {['home', 'about', 'contact', 'services'].map((r, idx) => (
             <Link href={`/${r === 'home' ? '' : r}`} key={idx}>
               <a

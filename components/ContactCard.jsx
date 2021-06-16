@@ -9,23 +9,23 @@ function ContactCard({
   return type === 'footer' ? (
     <div className={`text-center text-yellow-400 ${className}`}>
       {icon}
-      <span className="block mt-6 text-white font-medium font-lora">
+      <span className="block mt-6 font-medium text-white font-lora">
         {topLabel}
       </span>
-      <span className="block text-white font-medium font-lora">
+      <span className="block font-medium text-white font-lora">
         {bottomLabel}
       </span>
     </div>
   ) : (
     <div className={`text-center text-yellow-500 ${className}`}>
       {icon}
-      <span className="block mt-6 text-gray-800 font-bold text-xl font-lora">
+      <span className="block mt-6 text-xl font-bold text-gray-800 font-lora">
         {label}
       </span>
-      <span className="block mt-4 text-gray-800 font-medium font-lora">
+      <span className="block mt-4 font-medium text-gray-800 font-lora">
         {topLabel}
       </span>
-      <span className="block text-gray-800 font-medium font-lora">
+      <span className="block font-medium text-gray-800 font-lora">
         {bottomLabel}
       </span>
     </div>

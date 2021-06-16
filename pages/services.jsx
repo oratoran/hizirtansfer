@@ -5,18 +5,18 @@ import SEO from '#components/SEO';
 function FeatureCard({ title, desc, img, reversed }) {
   return (
     <div
-      className={`flex w-full gap-8 my-10 ${
+      className={`flex gap-8 my-10 w-full ${
         reversed ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row'
       }`}
     >
       <img
-        className="block w-full md:w-96 rounded-md shadow-lg object-cover"
+        className="block object-cover w-full rounded-md shadow-lg md:w-96"
         src={img}
         alt={title}
         style={{ aspectRatio: '16/9' }}
       />
-      <div className="text-true-gray-800 flex flex-col justify-center gap-4">
-        <h1 className="font-lora font-semibold text-2xl">{title}</h1>
+      <div className="flex flex-col gap-4 justify-center text-true-gray-800">
+        <h1 className="text-2xl font-semibold font-lora">{title}</h1>
         <p className="font-sans leading-relaxed">{desc}</p>
       </div>
     </div>
@@ -26,11 +26,11 @@ function FeatureCard({ title, desc, img, reversed }) {
 function TestimoniCard({ content, name, middle }) {
   return (
     <div className={`px-6 pt-10 pb-14 ${middle ? 'bg-gray-100' : ''}`}>
-      <span className="block text-6xl font-lora font-bold text-yellow-400 italic">
+      <span className="block text-6xl italic font-bold text-yellow-400 font-lora">
         &quot;
       </span>
-      <p className="font-sans text-true-gray-600 ">{content}</p>
-      <span className="block font-medium text-true-gray-800 mt-10 font-lora text-md">
+      <p className="font-sans text-true-gray-600">{content}</p>
+      <span className="block mt-10 font-medium text-true-gray-800 font-lora text-md">
         {name}
       </span>
     </div>
@@ -43,9 +43,9 @@ export default function Services() {
   return (
     <>
       <SEO title={t('title')} />
-      <header className="relative grid w-full place-items-center h-[32rem] pt-24">
+      <header className="grid relative place-items-center pt-24 w-full h-[32rem]">
         <div
-          className="bg bg-fixed bg-center absolute inset-0 z-[-5]"
+          className="absolute inset-0 bg-fixed bg-center bg z-[-5]"
           style={{
             backgroundImage: 'url("/assets/limo.jpg")',
             filter:
@@ -53,20 +53,20 @@ export default function Services() {
           }}
         />
         <div className="flex flex-col gap-6">
-          <h1 className="font-lora font-medium text-6xl text-white">
+          <h1 className="text-6xl font-medium text-white font-lora">
             {t('title')}
           </h1>
-          <div className="flex items-center justify-center gap-4 font-sans">
-            <span className="text-yellow-400 font-medium text-md">
+          <div className="flex gap-4 justify-center items-center font-sans">
+            <span className="font-medium text-yellow-400 text-md">
               {t('parent')}
             </span>
-            <span className="text-gray-400 font-bold text-sm">&#47;&#47;</span>
+            <span className="text-sm font-bold text-gray-400">&#47;&#47;</span>
             <span className="text-white text-md">{t('title')}</span>
           </div>
         </div>
       </header>
 
-      <section className="max-w-screen-lg mx-auto px-4 py-10">
+      <section className="py-10 px-4 mx-auto max-w-screen-lg">
         <FeatureCard
           title={t('showcase.first.title')}
           desc={t('showcase.first.desc')}
@@ -111,14 +111,14 @@ export default function Services() {
           background-color: #E6C473;
         }
       `}</style>
-      <div className="pt-10 pb-20 px-4 max-w-screen-lg mx-auto text-center">
-        <span className="block mb-2 text-2xl font-semibold font-lora italic text-yellow-500">
+      <div className="px-4 pt-10 pb-20 mx-auto max-w-screen-lg text-center">
+        <span className="block mb-2 text-2xl italic font-semibold text-yellow-500 font-lora">
           {t('testimoni.pre-title')}
         </span>
-        <h1 className="title relative mb-12 text-4xl font-lora font-bold text-gray-800">
+        <h1 className="relative mb-12 text-4xl font-bold text-gray-800 title font-lora">
           {t('testimoni.title')}
         </h1>
-        <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-rows-3 gap-8 w-full md:grid-rows-1 md:grid-cols-3">
           <TestimoniCard
             content={t('testimoni.items.first.content')}
             name={t('testimoni.items.first.name')}
