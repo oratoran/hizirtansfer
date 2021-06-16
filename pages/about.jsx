@@ -11,7 +11,7 @@ export default function About() {
       <SEO title={t('title')} />
       <header className="relative grid w-full place-items-center h-[32rem] pt-24">
         <div
-          className="bg bg-fixed bg-center absolute inset-0 -z-5"
+          className="bg bg-fixed bg-center absolute inset-0 z-[-5]"
           style={{
             backgroundImage: 'url("/assets/limo.jpg")',
             filter:
@@ -23,7 +23,7 @@ export default function About() {
             {t('title')}
           </h1>
           <div className="flex items-center justify-center gap-4 font-sans">
-            <span className="text-amber-300 font-medium text-md">
+            <span className="text-yellow-400 font-medium text-md">
               {t('parent')}
             </span>
             <span className="text-gray-400 font-bold text-sm">&#47;&#47;</span>
@@ -32,9 +32,9 @@ export default function About() {
         </div>
       </header>
 
-      <div className="bg-white py-10">
-        <article className="max-w-screen-xl grid <md:(grid-rows-auto gap-10) md:grid-cols-2 mx-auto">
-          <div className="px-4">
+      <div className="bg-white py-10 text-true-gray-800">
+        <article className="max-w-screen-xl grid grid-rows-auto gap-10 md:grid-cols-2 mx-auto">
+          <div className="p-4">
             <span className="block font-lora font-semibold text-3xl mb-6">
               {t('left.top.title')}
             </span>
@@ -60,13 +60,13 @@ export default function About() {
               <a
                 type="button"
                 href="/contact"
-                className="inline-block px-6 py-3 <md:mx-auto bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl"
+                className="inline-block px-6 py-3 mx-auto md:mx-0 bg-yellow-400 hover:bg-true-gray-800 hover:text-yellow-400 transition-colors ease-out delay-50 font-lora text-xl"
               >
                 {t('left.help.cta')}
               </a>
             </Link>
           </div>
-          <div className="px-4">
+          <div className="p-4">
             <p className="leading-loose font-sans text-lg mb-6">
               {t('right.first')}
             </p>

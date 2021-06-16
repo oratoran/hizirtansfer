@@ -15,11 +15,11 @@ export default function Contact() {
       <SEO title={t('title')} />
       <header className="relative grid w-full place-items-center h-[32rem] pt-24">
         <div
-          className="bg bg-fixed bg-center absolute inset-0 -z-5"
+          className="bg bg-fixed bg-center absolute inset-0 z-[-5]"
           style={{
             backgroundImage: 'url("/assets/limo.jpg")',
             filter:
-              'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
+              'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)'
           }}
         />
         <div className="flex flex-col gap-6">
@@ -27,7 +27,7 @@ export default function Contact() {
             {t('title')}
           </h1>
           <div className="flex items-center justify-center gap-4 font-sans">
-            <span className="text-amber-300 font-medium text-md">
+            <span className="text-yellow-400 font-medium text-md">
               {t('parent')}
             </span>
             <span className="text-gray-400 font-bold text-sm">&#47;&#47;</span>
@@ -36,34 +36,34 @@ export default function Contact() {
         </div>
       </header>
 
-      <div className="grid <md:grid-rows-4 md:grid-cols-4 py-10">
+      <div className="grid grid-rows-4 md:grid-rows-1 md:grid-cols-4 py-10">
         <ContactCard
-          icon={<Location width="32px" />}
+          icon={<Location className="inline" width="32px" />}
           label={t('details.location')}
           topLabel="Somewhere In Turkey"
           bottomLabel="123456"
-          className="border-dashed <md:(border-b-2 py-6) md:border-r-2 border-gray-500 border-opacity-40"
+          className="border-dashed border-b-2 py-6 md:border-b-0 md:py-0 md:border-r-2 border-gray-400 border-opacity-40"
         />
         <ContactCard
-          icon={<Phone width="32px" />}
+          icon={<Phone className="inline" width="32px" />}
           label={t('details.phones')}
           topLabel="0(550) 680-34-12"
           bottomLabel="Round-the-clock"
-          className="border-dashed <md:(border-b-2 py-6) md:border-r-2 border-gray-500 border-opacity-40"
+          className="border-dashed border-b-2 py-6 md:border-b-0 md:py-0 md:border-r-2 border-gray-400 border-opacity-40"
         />
         <ContactCard
-          icon={<Mail width="32px" />}
+          icon={<Mail className="inline" width="32px" />}
           label={t('details.email')}
           topLabel="info@hizirtransfer.com"
           bottomLabel="support@hizirtransfer.com"
-          className="border-dashed <md:(border-b-2 py-6) md:border-r-2 border-gray-500 border-opacity-40"
+          className="border-dashed border-b-2 py-6 md:border-b-0 md:py-0 md:border-r-2 border-gray-400 border-opacity-40"
         />
         <ContactCard
-          icon={<Clock width="32px" />}
+          icon={<Clock className="inline" width="32px" />}
           label={t('details.working_hours')}
           topLabel="Opening Hours"
           bottomLabel="07:00 - 16:00"
-          className="<md:py-6"
+          className="py-6 md:py-0"
         />
       </div>
 
@@ -93,23 +93,23 @@ export default function Contact() {
         </h1>
         <form className="grid grid-cols-2 gap-4">
           <input
-            className="p-6 py-4 border-3 border-gray-200 grid-col-1 outline-none"
+            className="p-6 py-4 border-2 border-gray-200 col-start-1 col-end-3 md:col-end-2 outline-none"
             type="text"
             placeholder={t('form.name')}
           />
           <input
-            className="p-6 py-4 border-3 border-gray-200 grid-col-2 outline-none"
+            className="p-6 py-4 border-2 border-gray-200 col-start-1 col-end-3 md:col-start-2 md:col-end-3 outline-none"
             type="text"
             placeholder={t('form.email')}
           />
           <textarea
-            className="p-6 border-3 border-gray-200 col-start-1 col-end-3 outline-none"
+            className="p-6 border-2 border-gray-200 col-start-1 col-end-3 outline-none"
             placeholder={t('form.message')}
             cols="30"
             rows="10"
           />
           <button
-            className="px-8 py-4 bg-yellow-400 hover:(bg-true-gray-800 text-yellow-400) transition-colors ease-out delay-50 font-lora text-xl font-medium col-start-1 col-end-3"
+            className="px-8 py-4 bg-yellow-400 hover:bg-true-gray-800 hover:text-yellow-400 transition-colors ease-out delay-50 font-lora text-xl font-medium col-start-1 col-end-3"
             type="submit"
           >
             {t('form.submit')}
@@ -122,6 +122,6 @@ export default function Contact() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['navbar', 'contact'])),
-  },
+    ...(await serverSideTranslations(locale, ['navbar', 'contact']))
+  }
 });

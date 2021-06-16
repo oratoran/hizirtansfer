@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import SEO from '#components/SEO';
@@ -6,19 +5,17 @@ import SEO from '#components/SEO';
 function FeatureCard({ title, desc, img, reversed }) {
   return (
     <div
-      className={`flex ${
-        reversed
-          ? '<md:flex-col md:flex-row-reverse'
-          : '<md:flex-col md:flex-row'
-      } w-full gap-8 my-10`}
+      className={`flex w-full gap-8 my-10 ${
+        reversed ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row'
+      }`}
     >
-      <Image
-        className="block <md:w-full md:w-96 rounded-md shadow-lg object-cover"
+      <img
+        className="block w-full md:w-96 rounded-md shadow-lg object-cover"
         src={img}
         alt={title}
         style={{ aspectRatio: '16/9' }}
       />
-      <div className="flex flex-col justify-center gap-4">
+      <div className="text-true-gray-800 flex flex-col justify-center gap-4">
         <h1 className="font-lora font-semibold text-2xl">{title}</h1>
         <p className="font-sans leading-relaxed">{desc}</p>
       </div>
@@ -32,8 +29,8 @@ function TestimoniCard({ content, name, middle }) {
       <span className="block text-6xl font-lora font-bold text-yellow-400 italic">
         &quot;
       </span>
-      <p className="font-sans text-gray-600">{content}</p>
-      <span className="block font-medium text-gray-800 mt-10 font-lora text-md">
+      <p className="font-sans text-true-gray-600 ">{content}</p>
+      <span className="block font-medium text-true-gray-800 mt-10 font-lora text-md">
         {name}
       </span>
     </div>
@@ -48,11 +45,11 @@ export default function Services() {
       <SEO title={t('title')} />
       <header className="relative grid w-full place-items-center h-[32rem] pt-24">
         <div
-          className="bg bg-fixed bg-center absolute inset-0 -z-5"
+          className="bg bg-fixed bg-center absolute inset-0 z-[-5]"
           style={{
             backgroundImage: 'url("/assets/limo.jpg")',
             filter:
-              'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
+              'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)'
           }}
         />
         <div className="flex flex-col gap-6">
@@ -60,7 +57,7 @@ export default function Services() {
             {t('title')}
           </h1>
           <div className="flex items-center justify-center gap-4 font-sans">
-            <span className="text-amber-300 font-medium text-md">
+            <span className="text-yellow-400 font-medium text-md">
               {t('parent')}
             </span>
             <span className="text-gray-400 font-bold text-sm">&#47;&#47;</span>
@@ -115,13 +112,13 @@ export default function Services() {
         }
       `}</style>
       <div className="pt-10 pb-20 px-4 max-w-screen-lg mx-auto text-center">
-        <span className="block mb-2 text-2xl font-semibold font-lora italic text-yellow-400">
+        <span className="block mb-2 text-2xl font-semibold font-lora italic text-yellow-500">
           {t('testimoni.pre-title')}
         </span>
         <h1 className="title relative mb-12 text-4xl font-lora font-bold text-gray-800">
           {t('testimoni.title')}
         </h1>
-        <div className="grid <md:grid-rows-3 md:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-8 w-full">
           <TestimoniCard
             content={t('testimoni.items.first.content')}
             name={t('testimoni.items.first.name')}
@@ -143,6 +140,6 @@ export default function Services() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['navbar', 'services'])),
-  },
+    ...(await serverSideTranslations(locale, ['navbar', 'services']))
+  }
 });

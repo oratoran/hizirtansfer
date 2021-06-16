@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
 
@@ -55,36 +54,33 @@ export default function Hero() {
           </span>
         </div>
         <div className="absolute inset-0">
-          <Image
-            className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-5 ${
+          <img
+            className={`anim object-bottom absolute w-screen h-screen md:h-auto object-cover z-[-5] ${
               active === 0 ? 'visible' : 'invisible'
             }`}
             src="/assets/limo.jpg"
             alt="limo"
-            layout="fill"
             style={{
               filter:
                 'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
             }}
           />
-          <Image
-            className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-4 ${
+          <img
+            className={`anim object-bottom absolute w-screen h-screen md:h-auto object-cover z-[-4] ${
               active === 1 ? 'visible' : 'invisible'
             }`}
             src="/assets/side_limo.jpg"
             alt="side_limo"
-            layout="fill"
             style={{
               filter:
                 'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
             }}
           />
-          <Image
-            className={`anim object-bottom absolute w-screen <md:(h-screen object-cover) -z-3 ${
+          <img
+            className={`anim object-bottom absolute w-screen h-screen md:h-auto object-cover z-[-3] ${
               active === 2 ? 'visible' : 'invisible'
             }`}
             src="/assets/limo_closeup.jpg"
-            layout="fill"
             alt="limo_closeup"
             style={{
               filter:

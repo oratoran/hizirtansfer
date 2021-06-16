@@ -21,34 +21,34 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed text-white border-b-2 transition-all duration-300 w-screen h-22 z-40 text-white
+        className={`fixed text-white border-b-2 transition-all duration-300 w-screen h-[5.25rem] z-40 text-white
         ${
           isScrolledDown || isToggled
-            ? 'text-gray-700 bg-white'
+            ? 'border-solid border-gray-200 text-true-gray-800 bg-white'
             : 'border-dashed border-gray-200 border-opacity-40'
         }`}
         style={{
           backgroundImage:
             isScrolledDown || isToggled
               ? ''
-              : 'linear-gradient( to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))',
+              : 'linear-gradient( to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))'
         }}
       >
         <div className="max-w-screen-xl px-4 grid grid-cols-3 justify-center items-center mx-auto h-full">
           <Link href="/">
-            <h1 className="font-bold font-lora text-xl <sm:(col-start-2 col-end-3)">
+            <h1 className="font-bold font-lora text-xl col-start-2 col-end-3 md:col-start-auto md:col-end-auto">
               HizirTransfer
             </h1>
           </Link>
-          <div className="font-sans flex items-center justify-between <sm:hidden">
+          <div className="md:flex hidden font-sans items-center justify-between">
             {['home', 'about', 'contact', 'services'].map((r, idx) => (
               <Link href={`/${r === 'home' ? '' : r}`} key={idx}>
                 <a
                   href={`/${r === 'home' ? '' : r}`}
-                  className={`text-sm transition-color duration-100 ease-in ${
+                  className={`text-sm ${
                     isScrolledDown
-                      ? 'text-gray-700 hover:(text-amber-600 underline)'
-                      : 'text-white hover:(text-amber-500 underline)'
+                      ? 'text-true-gray-800 hover:text-yellow-400 hover:underline'
+                      : 'text-white hover:text-yellow-400 hover:underline'
                   }`}
                 >
                   {t(r)}
@@ -56,12 +56,14 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-          <div className="flex items-center justify-end gap-5 <sm:hidden">
+          <div className="md:flex hidden items-center justify-end gap-5">
             <Link href="https://facebook.com">
               <a
                 aria-label="facebook"
                 href="https://facebook.com"
-                className={isScrolledDown ? 'text-gray-700' : 'text-white'}
+                className={`hover:text-yellow-400 ${
+                  isScrolledDown ? 'text-true-gray-800' : 'text-white'
+                }`}
               >
                 <Facebook />
               </a>
@@ -70,7 +72,7 @@ export default function Navbar() {
               <a
                 aria-label="twitter"
                 href="https://twitter.com"
-                className={isScrolledDown ? 'text-gray-700' : 'text-white'}
+                className={`hover:text-yellow-400 ${isScrolledDown ? 'text-true-gray-800' : 'text-white'}`}
               >
                 <Twitter />
               </a>
@@ -79,7 +81,7 @@ export default function Navbar() {
               <a
                 aria-label="whatsapp"
                 href="https://whatsapp.com"
-                className={isScrolledDown ? 'text-gray-700' : 'text-white'}
+                className={`hover:text-yellow-400 ${isScrolledDown ? 'text-true-gray-800' : 'text-white'}`}
               >
                 <Chat />
               </a>
@@ -88,8 +90,8 @@ export default function Navbar() {
           <button
             type="button"
             aria-label="mobile menu"
-            onClick={() => setToggled((prev) => !prev)}
-            className="<md:(grid col-start-3 col-end-4) hidden grid-rows-3 gap-2 justify-self-end gap-1 w-8 h-4"
+            onClick={() => setToggled(prev => !prev)}
+            className="grid col-start-3 col-end-4 md:hidden grid-rows-3 gap-2 justify-self-end gap-1 w-8 h-4"
           >
             <span
               className={`${
@@ -115,8 +117,8 @@ export default function Navbar() {
             <Link href={`/${r === 'home' ? '' : r}`} key={idx}>
               <a
                 href={`/${r === 'home' ? '' : r}`}
-                className="text-2xl transition-color duration-100 ease-in text-gray-700 hover:(text-amber-600 underline)"
-                onClick={() => setToggled((prev) => !prev)}
+                className="text-2xl text-true-gray-800 hover:text-amber-600 hover:underline"
+                onClick={() => setToggled(prev => !prev)}
               >
                 {t(r)}
               </a>
