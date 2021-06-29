@@ -11,7 +11,7 @@ export default function Footer() {
         <h1 className="mb-10 text-2xl font-medium text-center text-white font-lora">
           HizirTransfer
         </h1>
-        <div className="grid grid-rows-4 md:(grid-cols-4 grid-rows-1)">
+        <div className="grid grid-rows-4 md:grid-cols-4 md:grid-rows-1">
           <ContactCard
             icon={<Phone className="inline" width="24px" />}
             topLabel="0(550) 680-34-12"

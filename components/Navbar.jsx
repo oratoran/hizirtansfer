@@ -31,12 +31,12 @@ export default function Navbar() {
           backgroundImage:
             isScrolledDown || isToggled
               ? ''
-              : 'linear-gradient( to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))'
+              : 'linear-gradient( to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))',
         }}
       >
         <div className="grid grid-cols-3 justify-center items-center px-4 mx-auto max-w-screen-xl h-full">
           <Link href="/">
-            <h1 className="col-start-2 col-end-3 text-xl font-bold font-lora md:col-start-auto md:col-end-auto">
+            <h1 className="col-start-2 col-end-3 text-xl font-bold font-lora md:col-start-auto md:col-end-auto cursor-pointer hover:text-yellow-400">
               HizirTransfer
             </h1>
           </Link>
@@ -72,7 +72,9 @@ export default function Navbar() {
               <a
                 aria-label="twitter"
                 href="https://twitter.com"
-                className={`hover:text-yellow-400 ${isScrolledDown ? 'text-true-gray-800' : 'text-white'}`}
+                className={`hover:text-yellow-400 ${
+                  isScrolledDown ? 'text-true-gray-800' : 'text-white'
+                }`}
               >
                 <Twitter />
               </a>
@@ -81,7 +83,9 @@ export default function Navbar() {
               <a
                 aria-label="whatsapp"
                 href="https://whatsapp.com"
-                className={`hover:text-yellow-400 ${isScrolledDown ? 'text-true-gray-800' : 'text-white'}`}
+                className={`hover:text-yellow-400 ${
+                  isScrolledDown ? 'text-true-gray-800' : 'text-white'
+                }`}
               >
                 <Chat />
               </a>
@@ -90,7 +94,7 @@ export default function Navbar() {
           <button
             type="button"
             aria-label="mobile menu"
-            onClick={() => setToggled(prev => !prev)}
+            onClick={() => setToggled((prev) => !prev)}
             className="grid col-start-3 col-end-4 grid-rows-3 gap-1 gap-2 justify-self-end w-8 h-4 md:hidden"
           >
             <span
@@ -118,7 +122,7 @@ export default function Navbar() {
               <a
                 href={`/${r === 'home' ? '' : r}`}
                 className="text-2xl text-true-gray-800 hover:text-amber-600 hover:underline"
-                onClick={() => setToggled(prev => !prev)}
+                onClick={() => setToggled((prev) => !prev)}
               >
                 {t(r)}
               </a>
