@@ -10,16 +10,62 @@ import People from '#icons/people.svg';
 import 'react-day-picker/lib/style.css';
 
 export default function OrderForm() {
+  const [email, setEmail] = useState('');
   const [location, setLocation] = useState('');
+  const [date, setDate] = useState('');
   const timeRef = useRef(null);
   const [time, setTime] = useState('');
   const [limoClass, setLimoClass] = useState('');
   const [passengers, setPassengers] = useState('');
   const { t } = useTranslation('home');
 
+  const sendMail = (e) => {
+    e.preventDefault();
+
+    const data = {
+      email,
+      location,
+      time,
+      limoClass,
+      passengers,
+    };
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log('Response succeeded!');
+        setEmail('');
+        setLocation('');
+        setTime('');
+        setLimoClass('');
+        setPassengers('');
+      }
+    });
+  };
+
   return (
-    <form className="grid grid-cols-2 grid-rows-5 gap-4">
+    <form
+      className="grid grid-cols-2 grid-rows-6 gap-4"
+      onSubmit={(e) => sendMail(e)}
+    >
       <div className="flex col-start-1 col-end-3 row-start-1 gap-2 items-center p-5 bg-white border border-gray-300">
+        <input
+          className="w-full text-gray-500 outline-none text-md"
+          id="email"
+          type="email"
+          autoComplete="off"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div className="flex col-start-1 col-end-3 row-start-2 gap-2 items-center p-5 bg-white border border-gray-300">
         <Location className="text-yellow-400" width="22px" height="22px" />
         <input
           className="w-full text-gray-500 outline-none text-md"
@@ -31,7 +77,7 @@ export default function OrderForm() {
           onChange={(e) => setLocation(e.target.value)}
         />
       </div>
-      <div className="relative flex col-start-1 col-end-2 row-start-2 gap-2 items-center p-5 bg-white border border-gray-300">
+      <div className="relative flex col-start-1 col-end-2 row-start-3 gap-2 items-center p-5 bg-white border border-gray-300">
         <DateIcon className="text-yellow-400" width="22px" height="22px" />
         <DayPickerInput
           dayPickerProps={{
@@ -41,9 +87,10 @@ export default function OrderForm() {
             className:
               'w-full text-gray-500 outline-none text-md cursor-pointer',
           }}
+          value={date}
         />
       </div>
-      <div className="flex col-start-2 col-end-3 row-start-2 gap-2 items-center p-5 bg-white border border-gray-300">
+      <div className="flex col-start-2 col-end-3 row-start-3 gap-2 items-center p-5 bg-white border border-gray-300">
         <Clock className="text-yellow-400" width="22px" height="22px" />
         <style jsx>{`
           input[type='time']::-webkit-calendar-picker-indicator {
@@ -69,7 +116,7 @@ export default function OrderForm() {
           onChange={(e) => setTime(e.target.value)}
         />
       </div>
-      <div className="flex col-start-1 col-end-3 row-start-3 gap-2 items-center p-5 bg-white border border-gray-300">
+      <div className="flex col-start-1 col-end-3 row-start-4 gap-2 items-center p-5 bg-white border border-gray-300">
         <Limo className="text-yellow-400" width="22px" height="22px" />
         <select
           className="w-full bg-white outline-none text-md"
@@ -82,7 +129,7 @@ export default function OrderForm() {
           <option>{t('contact.form.class.luxury')}</option>
         </select>
       </div>
-      <div className="flex col-start-1 col-end-3 row-start-4 gap-2 items-center p-5 bg-white border border-gray-300">
+      <div className="flex col-start-1 col-end-3 row-start-5 gap-2 items-center p-5 bg-white border border-gray-300">
         <People className="text-yellow-400" width="22px" height="22px" />
         <select
           className="w-full bg-white outline-none text-md"
@@ -99,7 +146,7 @@ export default function OrderForm() {
         </select>
       </div>
       <button
-        className="block col-start-1 col-end-3 row-start-5 py-3 px-6 text-xl bg-yellow-400 transition-colors ease-out hover:bg-true-gray-800 hover:text-yellow-400 delay-50 font-lora"
+        className="block col-start-1 col-end-3 row-start-6 py-3 px-6 text-xl bg-yellow-400 transition-colors ease-out hover:bg-true-gray-800 hover:text-yellow-400 delay-50 font-lora"
         type="submit"
       >
         {t('contact.form.cta')}
