@@ -40,6 +40,19 @@
       "limo": "to get a limousine"
     },
     "desc": "Lorem debitis praesentium consequatur dolor quisquam. Fugiat officia sunt quaerat atque deleniti? Molestiae deserunt similique consequuntur.",
-    "call": "Call to book an order:"
+    "call": "Call to book an order:",
+    "form": {
+      "cta": "Get Limousine",
+      "passengers": "Passengers",
+      "location": "Enter Location",
+      "ordertime": "Order Time",
+      "date": "Order Date",
+      "class": {
+        "title": "Limo Class",
+        "standard": "Standard",
+        "vip": "VIP",
+        "luxury": "Luxury"
+      }
+    }
   }
 }

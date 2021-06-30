@@ -4,7 +4,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import Hero from '#components/Hero';
 import SEO from '#components/SEO';
-import Limo from '#icons/limo.svg';
 import LimoAlt from '#icons/limo_alt.svg';
 import Phone from '#icons/phone_call.svg';
 import Time from '#icons/time.svg';
@@ -12,10 +11,7 @@ import Seat from '#icons/seat.svg';
 import PriceTag from '#icons/price_tag.svg';
 import Driver from '#icons/driver.svg';
 import Whatsapp from '#icons/whatsapp.svg';
-import Clock from '#icons/clock.svg';
-import Location from '#icons/location.svg';
-import Date from '#icons/date.svg';
-import People from '#icons/people.svg';
+import OrderForm from '#components/OrderForm';
 
 function ServiceBox({ src, title, desc }) {
   return (
@@ -71,7 +67,7 @@ export default function Home() {
         className="grid items-center py-10 px-4 mx-auto max-w-screen-xl text-true-gray-800 min-h-[32rem] grid-rows-[1fr,2fr] md:grid-cols-2 md:grid-rows-1 md:gap-6"
         style={{
           backgroundImage: "url('/assets/worldmap.png')",
-          backgroundSize: 'cover'
+          backgroundSize: 'cover',
         }}
       >
         <div className="row-start-2 row-end-3 text-center md:row-start-auto md:row-end-auto md:text-left">
@@ -171,8 +167,7 @@ export default function Home() {
               {t('contact.title.use')}
               <span className="text-yellow-500">
                 {' '}
-                {t('contact.title.form')}
-                {' '}
+                {t('contact.title.form')}{' '}
               </span>
               {t('contact.title.limo')}
             </h1>
@@ -191,82 +186,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <div className="p-10 max-w-lg bg-gray-100">
-              <form className="grid grid-cols-2 grid-rows-5 gap-4">
-                <div className="flex col-start-1 col-end-3 row-start-1 gap-2 items-center p-5 bg-white border border-gray-300">
-                  <Location
-                    className="text-yellow-400"
-                    width="22px"
-                    height="22px"
-                  />
-                  <input
-                    className="w-full text-gray-500 outline-none text-md"
-                    id="location"
-                    type="text"
-                    placeholder="Enter Location"
-                  />
-                </div>
-                <div className="flex col-start-1 col-end-2 row-start-2 gap-2 items-center p-5 bg-white border border-gray-300">
-                  <Date
-                    className="text-yellow-400"
-                    width="22px"
-                    height="22px"
-                  />
-                  <input
-                    className="w-full text-gray-500 outline-none text-md"
-                    id="date"
-                    type="text"
-                    placeholder="Order Date"
-                  />
-                </div>
-                <div className="flex col-start-2 col-end-3 row-start-2 gap-2 items-center p-5 bg-white border border-gray-300">
-                  <Clock
-                    className="text-yellow-400"
-                    width="22px"
-                    height="22px"
-                  />
-                  <input
-                    className="w-full text-gray-500 outline-none text-md"
-                    id="time"
-                    type="text"
-                    placeholder="Order Time"
-                  />
-                </div>
-                <div className="flex col-start-1 col-end-3 row-start-3 gap-2 items-center p-5 bg-white border border-gray-300">
-                  <Limo
-                    className="text-yellow-400"
-                    width="22px"
-                    height="22px"
-                  />
-                  <select className="w-full bg-white outline-none text-md">
-                    <option>Limo Class</option>
-                    <option>Standard</option>
-                    <option>VIP</option>
-                    <option>Luxury</option>
-                  </select>
-                </div>
-                <div className="flex col-start-1 col-end-3 row-start-4 gap-2 items-center p-5 bg-white border border-gray-300">
-                  <People
-                    className="text-yellow-400"
-                    width="22px"
-                    height="22px"
-                  />
-                  <select className="w-full bg-white outline-none text-md">
-                    <option>Passengers</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                  </select>
-                </div>
-                <button
-                  className="block col-start-1 col-end-3 row-start-5 py-3 px-6 text-xl bg-yellow-400 transition-colors ease-out hover:bg-true-gray-800 hover:text-yellow-400 delay-50 font-lora"
-                  type="submit"
-                >
-                  Get Limousine
-                </button>
-              </form>
+              <OrderForm />
             </div>
           </div>
         </div>
@@ -277,6 +197,6 @@ export default function Home() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['home', 'hero', 'navbar']))
-  }
+    ...(await serverSideTranslations(locale, ['home', 'hero', 'navbar'])),
+  },
 });
