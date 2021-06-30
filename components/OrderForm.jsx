@@ -25,6 +25,7 @@ export default function OrderForm() {
     const data = {
       email,
       location,
+      date,
       time,
       limoClass,
       passengers,
@@ -42,6 +43,7 @@ export default function OrderForm() {
         console.log('Response succeeded!');
         setEmail('');
         setLocation('');
+        setDate('');
         setTime('');
         setLimoClass('');
         setPassengers('');
@@ -87,6 +89,7 @@ export default function OrderForm() {
             className:
               'w-full text-gray-500 outline-none text-md cursor-pointer',
           }}
+          onDayChange={(day) => setDate(day)}
           value={date}
         />
       </div>
