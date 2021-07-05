@@ -10,10 +10,10 @@ import People from '#icons/people.svg';
 import 'react-day-picker/lib/style.css';
 
 export default function OrderForm() {
+  const submitButton = useRef(null);
   const [email, setEmail] = useState('');
   const [location, setLocation] = useState('');
   const [date, setDate] = useState('');
-  const timeRef = useRef(null);
   const [time, setTime] = useState('');
   const [limoClass, setLimoClass] = useState('');
   const [passengers, setPassengers] = useState('');
@@ -31,7 +31,9 @@ export default function OrderForm() {
       passengers,
     };
 
-    fetch('/api/contact', {
+    submitButton.current.disabled = true;
+
+    fetch('/api/order', {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
@@ -40,13 +42,15 @@ export default function OrderForm() {
       body: JSON.stringify(data),
     }).then((res) => {
       if (res.status === 200) {
-        console.log('Response succeeded!');
+        // eslint-disable-next-line no-alert
+        alert('Your order has been sent!');
         setEmail('');
         setLocation('');
         setDate('');
         setTime('');
         setLimoClass('');
         setPassengers('');
+        submitButton.current.disabled = false;
       }
     });
   };
@@ -112,7 +116,6 @@ export default function OrderForm() {
           type="time"
           min="08:00"
           max="21:00"
-          ref={timeRef}
           placeholder={t('contact.form.ordertime')}
           onMouseDown={(e) => e.preventDefault()}
           value={time}
@@ -151,6 +154,7 @@ export default function OrderForm() {
       <button
         className="block col-start-1 col-end-3 row-start-6 py-3 px-6 text-xl bg-yellow-400 transition-colors ease-out hover:bg-true-gray-800 hover:text-yellow-400 delay-50 font-lora"
         type="submit"
+        ref={submitButton}
       >
         {t('contact.form.cta')}
       </button>
