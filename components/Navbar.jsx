@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Chat from '#icons/chat.svg';
 import Facebook from '#icons/facebook.svg';
 import Twitter from '#icons/twitter.svg';
+import Falcon from '#icons/falcon.svg';
 
 export default function Navbar() {
   const [isScrolledDown, setScrolledDown] = useState(false);
@@ -38,9 +39,12 @@ export default function Navbar() {
       >
         <div className="grid grid-cols-3 justify-center items-center px-4 mx-auto max-w-screen-xl h-full">
           <Link href="/">
-            <h1 className="col-start-2 col-end-3 text-xl font-bold font-lora md:col-start-auto md:col-end-auto cursor-pointer hover:text-yellow-400">
-              HizirTransfer
-            </h1>
+            <div className="flex gap-2 items-center col-start-1 col-end-3 md:col-start-auto md:col-end-auto hover:text-yellow ">
+              <Falcon />
+              <h1 className="text-xl font-bold font-lora cursor-pointer">
+                HizirTransfer
+              </h1>
+            </div>
           </Link>
           <div className="hidden justify-between items-center font-sans md:flex">
             {['home', 'about', 'contact', 'services'].map((r, idx) => (
