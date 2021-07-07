@@ -5,13 +5,15 @@ import SEO from '#components/SEO';
 function FeatureCard({ title, desc, img, reversed }) {
   return (
     <div
-      className={`grid grid-flow-col-dense gap-8 my-10 w-full ${
-        reversed ? 'grid-cols-[1.25fr,1fr]' : 'grid-cols-[1fr,1.25fr]'
+      className={`grid grid-flow-col-dense grid-cols-1 grid-rows-[1fr,1.5fr] md:grid-rows-1 md:gap-8 my-10 w-full ${
+        reversed ? 'md:grid-cols-[1.25fr,1fr]' : 'md:grid-cols-[1fr,1.25fr]'
       }`}
     >
       <img
         className={`block object-cover w-full rounded-md shadow-lg ${
-          reversed ? 'col-start-2 col-end-3' : 'col-start-1 col-end-2'
+          reversed
+            ? 'md:col-start-2 md:col-end-3'
+            : 'md:col-start-1 md:col-end-2'
         }`}
         src={img}
         alt={title}
@@ -19,7 +21,9 @@ function FeatureCard({ title, desc, img, reversed }) {
       />
       <div
         className={`flex flex-col gap-4 justify-center text-true-gray-800 ${
-          reversed ? 'col-start-1 col-end-2' : 'col-start-2 col-end-3'
+          reversed
+            ? 'md:col-start-1 md:col-end-2'
+            : 'md:col-start-2 md:col-end-3'
         }`}
       >
         <h1 className="text-2xl font-semibold font-lora">{title}</h1>

@@ -1,13 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import Chat from '#icons/chat.svg';
 import Facebook from '#icons/facebook.svg';
 import Twitter from '#icons/twitter.svg';
-import Chat from '#icons/chat.svg';
 
 export default function Navbar() {
-  const selectRef = useRef(null);
   const [isScrolledDown, setScrolledDown] = useState(false);
   const [isToggled, setToggled] = useState(false);
   const { t, i18n } = useTranslation('navbar');
@@ -96,7 +95,6 @@ export default function Navbar() {
             <select
               className="bg-transparent appearance-none cursor-pointer"
               value={i18n.language}
-              ref={selectRef}
               onChange={(e) => {
                 push(pathname, pathname, { locale: e.target.value });
               }}
@@ -131,19 +129,19 @@ export default function Navbar() {
             className="grid col-start-3 col-end-4 grid-rows-3 gap-1 gap-2 justify-self-end w-8 h-4 md:hidden"
           >
             <span
-              className={`${
+              className={`w-full h-full ${
                 isScrolledDown || isToggled ? 'bg-gray-800' : 'bg-white'
-              } w-full h-full`}
+              } ${isToggled && 'rotate-45 translate-y-1.5'}`}
             />
             <span
-              className={`${
+              className={`w-full h-full ${
                 isScrolledDown || isToggled ? 'bg-gray-800' : 'bg-white'
-              } w-full h-full`}
+              } ${isToggled && 'invisible'}`}
             />
             <span
-              className={`${
+              className={`w-full h-full ${
                 isScrolledDown || isToggled ? 'bg-gray-800' : 'bg-white'
-              } w-full h-full`}
+              } ${isToggled && '-rotate-45 -translate-y-1.5'}`}
             />
           </button>
         </div>
@@ -162,7 +160,7 @@ export default function Navbar() {
             </Link>
           ))}
           <select
-            className="bg-transparent"
+            className="bg-transparent text-xl"
             value={i18n.language}
             onChange={(e) => {
               push(pathname, pathname, { locale: e.target.value });
@@ -175,6 +173,21 @@ export default function Navbar() {
               TR
             </option>
           </select>
+          {i18n.language === 'en' ? (
+            <img
+              className="h-6 -ml-2 -mt-4 rounded-full"
+              src="/assets/uk.png"
+              alt="english"
+              style={{ aspectRatio: '1/1' }}
+            />
+          ) : (
+            <img
+              className="h-6 -ml-2 -mt-4 rounded-full"
+              src="/assets/tr.png"
+              alt="turkey"
+              style={{ aspectRatio: '1/1' }}
+            />
+          )}
         </div>
       )}
     </>
