@@ -1,7 +1,5 @@
 {
-  "title": "Contact Us",
-  "parent": "Home",
-  "details": {
+  "footer": {
     "location": {
       "label": "Location",
       "top": "Somewhere in Turkey",
@@ -22,12 +20,5 @@
       "top": "Opening Hours",
       "bottom": "07:00 - 16:00"
     }
-  },
-  "form": {
-    "title": "Send Message",
-    "name": "Your name",
-    "email": "Your email",
-    "message": "Message",
-    "submit": "Submit"
   }
 }

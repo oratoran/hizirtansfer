@@ -40,7 +40,7 @@ export default function Home() {
     <>
       <SEO title="Home" />
       <Hero />
-      <div className="py-10 px-4 bg-true-gray-800">
+      <div className="py-12 px-4 bg-true-gray-800">
         <div className="grid grid-rows-3 mx-auto w-full max-w-screen-lg md:grid-cols-3 md:grid-rows-1">
           <ServiceBox
             src="/assets/one.jpg"
@@ -197,6 +197,6 @@ export default function Home() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['home', 'hero', 'navbar'])),
+    ...(await serverSideTranslations(locale, ['navbar', 'home', 'hero', 'footer'])),
   },
 });

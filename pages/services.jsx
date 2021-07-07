@@ -5,19 +5,25 @@ import SEO from '#components/SEO';
 function FeatureCard({ title, desc, img, reversed }) {
   return (
     <div
-      className={`flex gap-8 my-10 w-full ${
-        reversed ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row'
+      className={`grid grid-flow-col-dense gap-8 my-10 w-full ${
+        reversed ? 'grid-cols-[1.25fr,1fr]' : 'grid-cols-[1fr,1.25fr]'
       }`}
     >
       <img
-        className="block object-cover w-full rounded-md shadow-lg md:w-96"
+        className={`block object-cover w-full rounded-md shadow-lg ${
+          reversed ? 'col-start-2 col-end-3' : 'col-start-1 col-end-2'
+        }`}
         src={img}
         alt={title}
         style={{ aspectRatio: '16/9' }}
       />
-      <div className="flex flex-col gap-4 justify-center text-true-gray-800">
+      <div
+        className={`flex flex-col gap-4 justify-center text-true-gray-800 ${
+          reversed ? 'col-start-1 col-end-2' : 'col-start-2 col-end-3'
+        }`}
+      >
         <h1 className="text-2xl font-semibold font-lora">{title}</h1>
-        <p className="font-sans leading-relaxed">{desc}</p>
+        <p className="font-sans leading-loose">{desc}</p>
       </div>
     </div>
   );
@@ -47,9 +53,9 @@ export default function Services() {
         <div
           className="absolute inset-0 bg-fixed bg-center bg z-[-5]"
           style={{
-            backgroundImage: 'url("/assets/limo.jpg")',
+            backgroundImage: 'url("/assets/slide-1.jpeg")',
             filter:
-              'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)'
+              'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
           }}
         />
         <div className="flex flex-col gap-6">
@@ -66,7 +72,7 @@ export default function Services() {
         </div>
       </header>
 
-      <section className="py-10 px-4 mx-auto max-w-screen-lg">
+      <section className="py-10 px-4 mx-auto max-w-screen-xl">
         <FeatureCard
           title={t('showcase.first.title')}
           desc={t('showcase.first.desc')}
@@ -108,7 +114,7 @@ export default function Services() {
           right: 25rem;
           bottom: -0.75rem;
           height: 3px;
-          background-color: #E6C473;
+          background-color: #e6c473;
         }
       `}</style>
       <div className="px-4 pt-10 pb-20 mx-auto max-w-screen-lg text-center">
@@ -140,6 +146,6 @@ export default function Services() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['navbar', 'services']))
-  }
+    ...(await serverSideTranslations(locale, ['navbar', 'services', 'footer'])),
+  },
 });

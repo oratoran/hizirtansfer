@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Facebook from '#icons/facebook.svg';
 import Twitter from '#icons/twitter.svg';
 import Chat from '#icons/chat.svg';
 
 export default function Navbar() {
+  const selectRef = useRef(null);
   const [isScrolledDown, setScrolledDown] = useState(false);
   const [isToggled, setToggled] = useState(false);
-  const { t } = useTranslation('navbar');
+  const { t, i18n } = useTranslation('navbar');
+  const { pathname, push } = useRouter();
 
   useEffect(() => {
     window.addEventListener(
@@ -90,6 +93,36 @@ export default function Navbar() {
                 <Chat />
               </a>
             </Link>
+            <select
+              className="bg-transparent appearance-none cursor-pointer"
+              value={i18n.language}
+              ref={selectRef}
+              onChange={(e) => {
+                push(pathname, pathname, { locale: e.target.value });
+              }}
+            >
+              <option className="text-gray-800" value="en">
+                EN
+              </option>
+              <option className="text-gray-800" value="tr">
+                TR
+              </option>
+            </select>
+            {i18n.language === 'en' ? (
+              <img
+                className="h-6 -ml-2 rounded-full"
+                src="/assets/uk.png"
+                alt="english"
+                style={{ aspectRatio: '1/1' }}
+              />
+            ) : (
+              <img
+                className="h-6 -ml-2 rounded-full"
+                src="/assets/tr.png"
+                alt="turkey"
+                style={{ aspectRatio: '1/1' }}
+              />
+            )}
           </div>
           <button
             type="button"
@@ -128,6 +161,20 @@ export default function Navbar() {
               </a>
             </Link>
           ))}
+          <select
+            className="bg-transparent"
+            value={i18n.language}
+            onChange={(e) => {
+              push(pathname, pathname, { locale: e.target.value });
+            }}
+          >
+            <option className="text-gray-800" value="en">
+              EN
+            </option>
+            <option className="text-gray-800" value="tr">
+              TR
+            </option>
+          </select>
         </div>
       )}
     </>

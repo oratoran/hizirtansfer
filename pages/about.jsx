@@ -13,7 +13,7 @@ export default function About() {
         <div
           className="absolute inset-0 bg-fixed bg-center bg z-[-5]"
           style={{
-            backgroundImage: 'url("/assets/limo.jpg")',
+            backgroundImage: 'url("/assets/slide-1.jpeg")',
             filter:
               'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)'
           }}
@@ -88,6 +88,6 @@ export default function About() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['navbar', 'about']))
+    ...(await serverSideTranslations(locale, ['navbar', 'about', 'footer']))
   }
 });

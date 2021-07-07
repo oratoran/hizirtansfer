@@ -52,7 +52,7 @@ export default function Contact() {
         <div
           className="absolute inset-0 bg-fixed bg-center bg z-[-5]"
           style={{
-            backgroundImage: 'url("/assets/limo.jpg")',
+            backgroundImage: 'url("/assets/slide-1.jpeg")',
             filter:
               'brightness(0.25) contrast(0.75) saturate(0.75) hue-rotate(15deg)',
           }}
@@ -74,30 +74,30 @@ export default function Contact() {
       <div className="grid grid-rows-4 py-10 md:grid-rows-1 md:grid-cols-4">
         <ContactCard
           icon={<Location className="inline" width="32px" />}
-          label={t('details.location')}
-          topLabel="Somewhere In Turkey"
-          bottomLabel="123456"
+          label={t('details.location.label')}
+          topLabel={t('details.location.top')}
+          bottomLabel={t('details.location.bottom')}
           className="py-6 border-b-2 border-gray-400 border-opacity-40 border-dashed md:border-b-0 md:py-0 md:border-r-2"
         />
         <ContactCard
           icon={<Phone className="inline" width="32px" />}
-          label={t('details.phones')}
-          topLabel="0(550) 680-34-12"
-          bottomLabel="Round-the-clock"
+          label={t('details.phones.label')}
+          topLabel={t('details.phones.top')}
+          bottomLabel={t('details.phones.bottom')}
           className="py-6 border-b-2 border-gray-400 border-opacity-40 border-dashed md:border-b-0 md:py-0 md:border-r-2"
         />
         <ContactCard
           icon={<Mail className="inline" width="32px" />}
-          label={t('details.email')}
-          topLabel="info@hizirtransfer.com"
-          bottomLabel="support@hizirtransfer.com"
+          label={t('details.email.label')}
+          topLabel={t('details.email.top')}
+          bottomLabel={t('details.email.bottom')}
           className="py-6 border-b-2 border-gray-400 border-opacity-40 border-dashed md:border-b-0 md:py-0 md:border-r-2"
         />
         <ContactCard
           icon={<Clock className="inline" width="32px" />}
-          label={t('details.working_hours')}
-          topLabel="Opening Hours"
-          bottomLabel="07:00 - 16:00"
+          label={t('details.working_hours.label')}
+          topLabel={t('details.email.top')}
+          bottomLabel={t('details.email.bottom')}
           className="py-6 md:py-0"
         />
       </div>
@@ -170,6 +170,6 @@ export default function Contact() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['navbar', 'contact'])),
+    ...(await serverSideTranslations(locale, ['navbar', 'contact', 'footer'])),
   },
 });

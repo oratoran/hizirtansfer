@@ -58,7 +58,7 @@ export default function Hero() {
             className={`object-cover object-bottom absolute w-screen h-screen anim md:h-auto z-[-5] ${
               active === 0 ? 'visible' : 'invisible'
             }`}
-            src="/assets/limo.jpg"
+            src="/assets/slide-1.jpeg"
             alt="limo"
             style={{
               filter:
@@ -69,7 +69,7 @@ export default function Hero() {
             className={`object-cover object-bottom absolute w-screen h-screen anim md:h-auto z-[-4] ${
               active === 1 ? 'visible' : 'invisible'
             }`}
-            src="/assets/side_limo.jpg"
+            src="/assets/slide-2.jpeg"
             alt="side_limo"
             style={{
               filter:
@@ -80,7 +80,7 @@ export default function Hero() {
             className={`object-cover object-bottom absolute w-screen h-screen anim md:h-auto z-[-3] ${
               active === 2 ? 'visible' : 'invisible'
             }`}
-            src="/assets/limo_closeup.jpg"
+            src="/assets/slide-3.jpeg"
             alt="limo_closeup"
             style={{
               filter:

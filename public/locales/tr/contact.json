@@ -2,10 +2,26 @@
   "title": "Contact Us",
   "parent": "Home",
   "details": {
-    "location": "Location",
-    "phones": "Phones",
-    "email": "Email",
-    "working_hours": "Working Hours"
+    "location": {
+      "label": "Location",
+      "top": "Somewhere in Turkey",
+      "bottom": "123456"
+    },
+    "phones": {
+      "label": "Phones",
+      "top": "0(550) 680-34-12",
+      "bottom": "Round-the-clock"
+    },
+    "email": {
+      "label": "Email",
+      "top": "info@hizirtransfer.com",
+      "bottom": "support@hizirtransfer.com"
+    },
+    "working_hours": {
+      "label": "Working Hours",
+      "top": "Opening Hours",
+      "bottom": "07:00 - 16:00"
+    }
   },
   "form": {
     "title": "Send Message",
