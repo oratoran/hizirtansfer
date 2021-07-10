@@ -18,6 +18,7 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'no-console': 'off',
   },
   settings: {
     'import/resolver': {
